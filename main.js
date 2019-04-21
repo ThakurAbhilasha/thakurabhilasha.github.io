@@ -360,7 +360,7 @@ var LoginComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".mat-toolbar{\r\n    justify-content: center;\r\n}\r\n.fill-remaining-space{\r\n    text-align: center;\r\n}\r\n.error{\r\n    color:red;\r\n}\r\n.form-body{\r\n    margin: 0 auto;\r\n    width: 500px;\r\n    margin-top:100px;\r\n}\r\n.form-full-width .form-element{\r\n    width:500px;\r\n }\r\n.button-reset{\r\n     margin-left:20px;\r\n }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbG9naW4vcmVnaXN0ZXIvcmVnaXN0ZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLHVCQUF1QjtBQUMzQjtBQUNBO0lBQ0ksa0JBQWtCO0FBQ3RCO0FBQ0E7SUFDSSxTQUFTO0FBQ2I7QUFDQTtJQUNJLGNBQWM7SUFDZCxZQUFZO0lBQ1osZ0JBQWdCO0FBQ3BCO0FBRUE7SUFDSSxXQUFXO0NBQ2Q7QUFDQTtLQUNJLGdCQUFnQjtDQUNwQiIsImZpbGUiOiJzcmMvYXBwL2xvZ2luL3JlZ2lzdGVyL3JlZ2lzdGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWF0LXRvb2xiYXJ7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxufVxyXG4uZmlsbC1yZW1haW5pbmctc3BhY2V7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuLmVycm9ye1xyXG4gICAgY29sb3I6cmVkO1xyXG59XHJcbi5mb3JtLWJvZHl7XHJcbiAgICBtYXJnaW46IDAgYXV0bztcclxuICAgIHdpZHRoOiA1MDBweDtcclxuICAgIG1hcmdpbi10b3A6MTAwcHg7XHJcbn1cclxuICAgIFxyXG4uZm9ybS1mdWxsLXdpZHRoIC5mb3JtLWVsZW1lbnR7XHJcbiAgICB3aWR0aDo1MDBweDtcclxuIH1cclxuIC5idXR0b24tcmVzZXR7XHJcbiAgICAgbWFyZ2luLWxlZnQ6MjBweDtcclxuIH0iXX0= */"
+module.exports = ".mat-toolbar{\r\n    justify-content: center;\r\n}\r\n.fill-remaining-space{\r\n    text-align: center;\r\n}\r\n.error{\r\n    color:red;\r\n}\r\n.form-body{\r\n    margin: 0 auto;\r\n    width: 500px;\r\n    margin-top:100px;\r\n}\r\n.form-full-width .form-element{\r\n    width:500px;\r\n }\r\n.button-reset{\r\n     margin-left:20px;\r\n }\r\n.button-right{\r\n     float:right;\r\n }\r\n.button-back{\r\n     margin-left: 200px;\r\n }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbG9naW4vcmVnaXN0ZXIvcmVnaXN0ZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLHVCQUF1QjtBQUMzQjtBQUNBO0lBQ0ksa0JBQWtCO0FBQ3RCO0FBQ0E7SUFDSSxTQUFTO0FBQ2I7QUFDQTtJQUNJLGNBQWM7SUFDZCxZQUFZO0lBQ1osZ0JBQWdCO0FBQ3BCO0FBRUE7SUFDSSxXQUFXO0NBQ2Q7QUFDQTtLQUNJLGdCQUFnQjtDQUNwQjtBQUVBO0tBQ0ksV0FBVztDQUNmO0FBQ0E7S0FDSSxrQkFBa0I7Q0FDdEIiLCJmaWxlIjoic3JjL2FwcC9sb2dpbi9yZWdpc3Rlci9yZWdpc3Rlci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1hdC10b29sYmFye1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbn1cclxuLmZpbGwtcmVtYWluaW5nLXNwYWNle1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcbi5lcnJvcntcclxuICAgIGNvbG9yOnJlZDtcclxufVxyXG4uZm9ybS1ib2R5e1xyXG4gICAgbWFyZ2luOiAwIGF1dG87XHJcbiAgICB3aWR0aDogNTAwcHg7XHJcbiAgICBtYXJnaW4tdG9wOjEwMHB4O1xyXG59XHJcbiAgICBcclxuLmZvcm0tZnVsbC13aWR0aCAuZm9ybS1lbGVtZW50e1xyXG4gICAgd2lkdGg6NTAwcHg7XHJcbiB9XHJcbiAuYnV0dG9uLXJlc2V0e1xyXG4gICAgIG1hcmdpbi1sZWZ0OjIwcHg7XHJcbiB9XHJcblxyXG4gLmJ1dHRvbi1yaWdodHtcclxuICAgICBmbG9hdDpyaWdodDtcclxuIH1cclxuIC5idXR0b24tYmFja3tcclxuICAgICBtYXJnaW4tbGVmdDogMjAwcHg7XHJcbiB9Il19 */"
 
 /***/ }),
 
@@ -371,7 +371,7 @@ module.exports = ".mat-toolbar{\r\n    justify-content: center;\r\n}\r\n.fill-re
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-toolbar color=\"primary\">\n  <span class=\"fill-remaining-space\">Register</span>\n</mat-toolbar>\n<form [formGroup]=\"registerForm\" class=\"form form-full-width\">\n\n  <div class=\"form-body\">\n    <div *ngIf=\"doesEmailExist\" class=\"error-msg\">\n      <p class=\"error\">Email Id already exists</p>\n    </div>\n\n    <mat-form-field class=\"form-element\">\n      <input name=\"username\" matInput placeholder=\"User Name\" formControlName=\"username\" />\n    </mat-form-field>\n    <div\n      *ngIf=\"registerForm.controls['username'].errors && (registerForm.controls['username'].dirty && registerForm.controls['username'].touched )\"\n      class=\"error-msg\">\n      <span class=\"error\" [hidden]=\"!registerForm.controls['username'].errors.required\">Username is required.</span>\n    </div>\n\n    <mat-form-field class=\"form-element\">\n      <input name=\"email\" matInput placeholder=\"Email\" formControlName=\"email\" />\n    </mat-form-field>\n    <div\n      *ngIf=\"registerForm.controls['email'].errors && (registerForm.controls['email'].dirty && registerForm.controls['email'].touched )\"\n      class=\"error-msg\">\n      <span class=\"error\" [hidden]=\"!registerForm.controls['email'].errors.required\">Email is required.</span>\n      <span class=\"error\" [hidden]=\"!registerForm.controls['email'].errors.email\">Email is invalid.</span>\n    </div>\n\n    <br />\n\n    <mat-form-field class=\"form-element\">\n      <input type=\"password\" name=\"password\" matInput placeholder=\"Password\" formControlName=\"password\">\n    </mat-form-field>\n    <div\n      *ngIf=\"registerForm.controls['password'].errors && (registerForm.controls['password'].dirty && registerForm.controls['password'].touched )\"\n      class=\"error-msg\">\n      <span class=\"error\" [hidden]=\"!registerForm.controls['password'].errors.required\">Password is required.</span>\n    </div>\n\n    <div class=\"form-element\">\n      <button mat-raised-button color=\"primary\" (click)=\"onSubmit(registerForm.value)\" type=\"submit\"\n        [disabled]=\"!registerForm.valid\"><i class=\"fa fa-address-book\"></i> Register\n      </button>\n\n      <button mat-raised-button (click)=\"reset()\" color=\"accent\" type=\"reset\" class=\"button-reset\"\n        [disabled]=\"isDisabled\"><i class=\"fa fa-undo\"></i>\n        Reset</button>\n    </div>\n  </div>\n</form>"
+module.exports = "<mat-toolbar color=\"primary\">\n  <span class=\"fill-remaining-space\">Register</span>\n</mat-toolbar>\n\n<form [formGroup]=\"registerForm\" class=\"form form-full-width\">\n\n  <div class=\"form-body\">\n    <div *ngIf=\"doesEmailExist\" class=\"error-msg\">\n      <p class=\"error\">Email Id already exists</p>\n    </div>\n\n    <mat-form-field class=\"form-element\">\n      <input name=\"username\" matInput placeholder=\"User Name\" formControlName=\"username\" />\n    </mat-form-field>\n    <div\n      *ngIf=\"registerForm.controls['username'].errors && (registerForm.controls['username'].dirty && registerForm.controls['username'].touched )\"\n      class=\"error-msg\">\n      <span class=\"error\" [hidden]=\"!registerForm.controls['username'].errors.required\">Username is required.</span>\n    </div>\n\n    <mat-form-field class=\"form-element\">\n      <input name=\"email\" matInput placeholder=\"Email\" formControlName=\"email\" />\n    </mat-form-field>\n    <div\n      *ngIf=\"registerForm.controls['email'].errors && (registerForm.controls['email'].dirty && registerForm.controls['email'].touched )\"\n      class=\"error-msg\">\n      <span class=\"error\" [hidden]=\"!registerForm.controls['email'].errors.required\">Email is required.</span>\n      <span class=\"error\" [hidden]=\"!registerForm.controls['email'].errors.email\">Email is invalid.</span>\n    </div>\n\n    <br />\n\n    <mat-form-field class=\"form-element\">\n      <input type=\"password\" name=\"password\" matInput placeholder=\"Password\" formControlName=\"password\">\n    </mat-form-field>\n    <div\n      *ngIf=\"registerForm.controls['password'].errors && (registerForm.controls['password'].dirty && registerForm.controls['password'].touched )\"\n      class=\"error-msg\">\n      <span class=\"error\" [hidden]=\"!registerForm.controls['password'].errors.required\">Password is required.</span>\n    </div>\n\n    <div class=\"form-element\">\n      <button mat-raised-button color=\"primary\" (click)=\"onSubmit(registerForm.value)\" type=\"submit\"\n        [disabled]=\"!registerForm.valid\"><i class=\"fa fa-address-book\"></i> Register\n      </button>\n\n      <button mat-raised-button (click)=\"reset()\" color=\"accent\" type=\"reset\" class=\"button-reset\"><i\n          class=\"fa fa-undo\"></i>\n        Reset</button>\n\n        <button mat-raised-button class=\"button-back\" (click)=\"back()\" color=\"primary\"><i class=\"fa fa-arrow-left\"></i>\n          Back</button>\n    </div>\n  </div>\n</form>"
 
 /***/ }),
 
@@ -451,6 +451,13 @@ var RegisterComponent = /** @class */ (function () {
         this.registerForm.reset();
         this.registerForm.markAsPristine();
         this.registerForm.markAsUntouched();
+    };
+    /**
+     * Go back to login page
+     * @memberOf RegisterComponent
+     */
+    RegisterComponent.prototype.back = function () {
+        this.router.navigateByUrl('/login');
     };
     RegisterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1309,6 +1316,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+/**
+ * Route Guard
+ * Allows only users that are logged in
+ * @export
+ * @class AuthGuard
+ * @implements {CanActivate}
+ */
 var AuthGuard = /** @class */ (function () {
     function AuthGuard(authService) {
         this.authService = authService;
@@ -1358,7 +1372,7 @@ var Data = /** @class */ (function () {
         ];
         var students = [{
                 'id': 1,
-                'studentName': 'John snow',
+                'studentName': 'Jon snow',
                 'category': 'International',
                 'documents': {
                     'domicile': true,
@@ -1417,6 +1431,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 
 
+/**
+ * filter to perform search in student list
+ *
+ * @export
+ * @class FilterPipe
+ * @implements {PipeTransform}
+ */
 var FilterPipe = /** @class */ (function () {
     function FilterPipe() {
     }
@@ -1463,25 +1484,69 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+/**
+ * Deals with login credentials verification and registeration
+ * @export
+ * @class AuthService
+ */
 var AuthService = /** @class */ (function () {
+    /**
+     * Creates an instance of AuthService.
+     * @param {HttpClient} httpClient
+     *
+     * @memberOf AuthService
+     */
     function AuthService(httpClient) {
         this.httpClient = httpClient;
-        this.baseUrl = 'http://localhost:4200/api/users';
+        this.baseUrl = '/api/users';
         this.loggedInUser$ = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](null);
     }
+    /**
+     *
+     * Checks if credentials entered exist or not
+     * @param {IUser} userInfo
+     * @returns {Observable<IUser[]>}
+     *
+     * @memberOf AuthService
+     */
     AuthService.prototype.checkCredentials = function (userInfo) {
         return this.httpClient.get(this.baseUrl).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (user) { return user.filter(function (x) { return x.email == userInfo.email && x.password == userInfo.password; }); }));
     };
+    /**
+     * Get logged in user detail from local storage
+     * @returns {IUser}
+     *
+     * @memberOf AuthService
+     */
     AuthService.prototype.getLoggedInUser = function () {
         return JSON.parse(localStorage.getItem('loggedInUser'));
     };
+    /**
+     * login sets the token in local storage
+     * @param {any} userInfo
+     *
+     * @memberOf AuthService
+     */
     AuthService.prototype.login = function (userInfo) {
-        localStorage.setItem('token', "myToken");
+        localStorage.setItem('on-boarding-app-token', "myToken");
         localStorage.setItem('loggedInUser', JSON.stringify(userInfo));
     };
+    /**
+     * Checks if the user is logged in by checking token in local storage
+     * @returns
+     *
+     * @memberOf AuthService
+     */
     AuthService.prototype.isLoggedIn = function () {
-        return localStorage.getItem('token') !== null;
+        return localStorage.getItem('on-boarding-app-token') !== null;
     };
+    /**
+     * register user in system
+     * @param {IUser} user
+     * @returns {Observable<IUser>}
+     *
+     * @memberOf AuthService
+     */
     AuthService.prototype.registerUser = function (user) {
         try {
             this.getNextIdForUser().subscribe(function (value) {
@@ -1493,18 +1558,42 @@ var AuthService = /** @class */ (function () {
             console.log(ex.message);
         }
     };
+    /**
+     * Get next id for user to be entered
+     * @returns {Observable<number>}
+     *
+     * @memberOf AuthService
+     */
     AuthService.prototype.getNextIdForUser = function () {
         return this.getUsers().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (user) { return user.reduce(function (prev, curr) {
             return (prev.id > curr.id) ? prev : curr;
         }).id + 1; }));
     };
+    /**
+     * Get all users registered
+     * @returns {Observable<IUser[]>}
+     *
+     * @memberOf AuthService
+     */
     AuthService.prototype.getUsers = function () {
         return this.httpClient.get(this.baseUrl).pipe();
     };
+    /**
+     * Logout removes the token and logged in user from local storage
+     * @memberOf AuthService
+     */
     AuthService.prototype.logout = function () {
-        localStorage.removeItem('token');
+        localStorage.removeItem('on-boarding-app-token');
         localStorage.removeItem('loggedInUser');
     };
+    /**
+     * handle error
+     * @private
+     * @param {HttpErrorResponse} err
+     * @returns
+     *
+     * @memberOf AuthService
+     */
     AuthService.prototype.handleError = function (err) {
         var errorMessage = '';
         if (err.error instanceof ErrorEvent) {
@@ -1549,50 +1638,111 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+/**
+ * This service deals with student on-boarding
+ * @export
+ * @class StudentService
+ */
 var StudentService = /** @class */ (function () {
     function StudentService(httpClient) {
         this.httpClient = httpClient;
-        this.baseUrl = 'http://localhost:4200/api/students';
+        this.baseUrl = '/api/students';
         this.studentData$ = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](null);
         this.StudentDataForEdit$ = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](null);
     }
+    /**
+    * get Student that needs to be edited
+    * @returns
+    *
+    * @memberOf StudentService
+    */
     StudentService.prototype.getStudentDataForEdit = function () {
         return this.StudentDataForEdit$.asObservable().pipe();
     };
+    /**
+     * update student data in behavior subject
+     * @param {any} value
+     *
+     * @memberOf StudentService
+     */
     StudentService.prototype.sendStudentDataForEdit = function (value) {
         this.StudentDataForEdit$.next(value);
     };
+    /**
+     * get student with id
+     * @param {number} id
+     * @returns {Observable<IStudent>}
+     *
+     * @memberOf StudentService
+     */
     StudentService.prototype.getStudent = function (id) {
         var url = this.baseUrl + "/" + id;
         return this.httpClient.get(url).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
     };
+    /**
+     * get List of all students
+     * @returns
+     *
+     * @memberOf StudentService
+     */
     StudentService.prototype.getStudentData = function () {
         return this.studentData$.asObservable();
     };
+    /**
+     * update all student list in behavior subject
+     * @memberOf StudentService
+     */
     StudentService.prototype.sendStudentData = function () {
         var _this = this;
         var data = this.httpClient.get(this.baseUrl).subscribe(function (value) {
             _this.studentData$.next(value);
         });
     };
+    /**
+     * get all students using http request
+     * @returns {Observable<IStudent[]>}
+     *
+     * @memberOf StudentService
+     */
     StudentService.prototype.getStudents = function () {
         return this.httpClient.get(this.baseUrl).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
     };
+    /**
+     * get next id for student to be inserted
+     *
+     * @returns {Observable<number>}
+     *
+     * @memberOf StudentService
+     */
     StudentService.prototype.getNextIdForStudent = function () {
         return this.getStudents().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (students) { return students.reduce(function (prev, curr) {
             return (prev.id > curr.id) ? prev : curr;
         }).id + 1; }));
     };
+    /**
+     * insert student using http post request
+     *
+     * @param {IStudent} student
+     * @returns {Observable<IStudent>}
+     *
+     * @memberOf StudentService
+     */
     StudentService.prototype.addStudent = function (student) {
         try {
-            console.log("add");
-            console.log(student);
             return this.httpClient.post(this.baseUrl, student).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
         }
         catch (ex) {
             console.log(ex.message);
         }
     };
+    /**
+     * delete student using http delete request
+     *
+     * @param {number} id
+     * @returns {Observable<IStudent>}
+     *
+     * @memberOf StudentService
+     */
     StudentService.prototype.deleteStudent = function (id) {
         try {
             var url = this.baseUrl + "/" + id;
@@ -1602,10 +1752,16 @@ var StudentService = /** @class */ (function () {
             console.log(ex.message);
         }
     };
+    /**
+     * update student using http put request
+     *
+     * @param {IStudent} student
+     * @returns {Observable<IStudent>}
+     *
+     * @memberOf StudentService
+     */
     StudentService.prototype.updateStudent = function (student) {
         try {
-            console.log("edit");
-            console.log(student);
             var url = this.baseUrl + "/" + student.id;
             return this.httpClient.put(url, student).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
         }
@@ -1613,6 +1769,15 @@ var StudentService = /** @class */ (function () {
             console.log(ex.message);
         }
     };
+    /**
+     * handle error
+     *
+     * @private
+     * @param {HttpErrorResponse} err
+     * @returns
+     *
+     * @memberOf StudentService
+     */
     StudentService.prototype.handleError = function (err) {
         var errorMessage = '';
         if (err.error instanceof ErrorEvent) {
