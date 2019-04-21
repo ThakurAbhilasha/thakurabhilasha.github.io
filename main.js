@@ -38,10 +38,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _on_board_on_boarding_on_boarding_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./on-board/on-boarding/on-boarding.component */ "./src/app/on-board/on-boarding/on-boarding.component.ts");
 /* harmony import */ var _login_login_login_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./login/login/login.component */ "./src/app/login/login/login.component.ts");
-/* harmony import */ var _shared_auth_guard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shared/auth.guard */ "./src/app/shared/auth.guard.ts");
+/* harmony import */ var _shared_auth_guard_auth_guard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shared/auth-guard/auth.guard */ "./src/app/shared/auth-guard/auth.guard.ts");
 /* harmony import */ var _on_board_student_list_student_list_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./on-board/student-list/student-list.component */ "./src/app/on-board/student-list/student-list.component.ts");
 /* harmony import */ var _on_board_on_boarding_form_on_boarding_form_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./on-board/on-boarding-form/on-boarding-form.component */ "./src/app/on-board/on-boarding-form/on-boarding-form.component.ts");
-/* harmony import */ var _login_register_register_register_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./login/register/register/register.component */ "./src/app/login/register/register/register.component.ts");
+/* harmony import */ var _login_register_register_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./login/register/register.component */ "./src/app/login/register/register.component.ts");
 
 
 
@@ -54,7 +54,7 @@ __webpack_require__.r(__webpack_exports__);
 var routes = [
     { path: '', pathMatch: 'full', redirectTo: 'login' },
     { path: 'login', component: _login_login_login_component__WEBPACK_IMPORTED_MODULE_4__["LoginComponent"] },
-    { path: 'register', component: _login_register_register_register_component__WEBPACK_IMPORTED_MODULE_8__["RegisterComponent"] },
+    { path: 'register', component: _login_register_register_component__WEBPACK_IMPORTED_MODULE_8__["RegisterComponent"] },
     {
         path: 'onBoard', component: _on_board_on_boarding_on_boarding_component__WEBPACK_IMPORTED_MODULE_3__["OnboardingComponent"],
         children: [
@@ -67,7 +67,7 @@ var routes = [
                 component: _on_board_student_list_student_list_component__WEBPACK_IMPORTED_MODULE_6__["StudentsListComponent"]
             }
         ],
-        canActivate: [_shared_auth_guard__WEBPACK_IMPORTED_MODULE_5__["AuthGuard"]]
+        canActivate: [_shared_auth_guard_auth_guard__WEBPACK_IMPORTED_MODULE_5__["AuthGuard"]]
     }
 ];
 var AppRoutingModule = /** @class */ (function () {
@@ -154,11 +154,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var angular_in_memory_web_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! angular-in-memory-web-api */ "./node_modules/angular-in-memory-web-api/index.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _on_board_on_boarding_app_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./on-board/on-boarding-app.module */ "./src/app/on-board/on-boarding-app.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _shared_data__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./shared/data */ "./src/app/shared/data.ts");
-/* harmony import */ var _login_login_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./login/login.module */ "./src/app/login/login.module.ts");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _on_board_on_boarding_app_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./on-board/on-boarding-app.module */ "./src/app/on-board/on-boarding-app.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _shared_data_data__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./shared/data/data */ "./src/app/shared/data/data.ts");
+/* harmony import */ var _login_login_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./login/login.module */ "./src/app/login/login.module.ts");
+
+
 
 
 
@@ -175,17 +179,20 @@ var AppModule = /** @class */ (function () {
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
+                _app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
-                _on_board_on_boarding_app_module__WEBPACK_IMPORTED_MODULE_5__["OnboardingAppModule"],
-                _login_login_module__WEBPACK_IMPORTED_MODULE_8__["LoginModule"],
-                angular_in_memory_web_api__WEBPACK_IMPORTED_MODULE_3__["InMemoryWebApiModule"].forRoot(_shared_data__WEBPACK_IMPORTED_MODULE_7__["Data"])
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"],
+                _on_board_on_boarding_app_module__WEBPACK_IMPORTED_MODULE_7__["OnboardingAppModule"],
+                _login_login_module__WEBPACK_IMPORTED_MODULE_10__["LoginModule"],
+                angular_in_memory_web_api__WEBPACK_IMPORTED_MODULE_3__["InMemoryWebApiModule"].forRoot(_shared_data_data__WEBPACK_IMPORTED_MODULE_9__["Data"]),
+                ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrModule"].forRoot(),
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_4__["BrowserAnimationsModule"],
+                ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrModule"]
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -211,7 +218,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _on_board_material_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../on-board/material.module */ "./src/app/on-board/material.module.ts");
 /* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login/login.component.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _register_register_register_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./register/register/register.component */ "./src/app/login/register/register/register.component.ts");
+/* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./register/register.component */ "./src/app/login/register/register.component.ts");
 
 
 
@@ -224,7 +231,7 @@ var LoginModule = /** @class */ (function () {
     }
     LoginModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-            declarations: [_login_login_component__WEBPACK_IMPORTED_MODULE_4__["LoginComponent"], _register_register_register_component__WEBPACK_IMPORTED_MODULE_6__["RegisterComponent"]],
+            declarations: [_login_login_component__WEBPACK_IMPORTED_MODULE_4__["LoginComponent"], _register_register_component__WEBPACK_IMPORTED_MODULE_6__["RegisterComponent"]],
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
                 _on_board_material_module__WEBPACK_IMPORTED_MODULE_3__["MaterialModule"],
@@ -247,7 +254,7 @@ var LoginModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".mat-toolbar{\r\n    justify-content: center;\r\n    /* background-color: rgb(96,125,139)  */\r\n}\r\n/* .button-green{\r\n    background-color: rgb(96,125,139) ;\r\n    color:white;\r\n} */\r\n.register{\r\n    float: right;\r\n}\r\n.register-span{\r\n    float: right;\r\n    margin-top: 10px;\r\n    margin-right: 5px;\r\n}\r\n.fill-remaining-space{\r\n    text-align: center;\r\n}\r\n.error{\r\n    color:red;\r\n}\r\n.form-body{\r\n    margin: 0 auto;\r\n    width: 500px;\r\n    margin-top:100px;\r\n    }\r\n.form-full-width .form-element{\r\n        width:500px;\r\n    }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbG9naW4vbG9naW4vbG9naW4uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLHVCQUF1QjtJQUN2Qix1Q0FBdUM7QUFDM0M7QUFDQTs7O0dBR0c7QUFDSDtJQUNJLFlBQVk7QUFDaEI7QUFDQTtJQUNJLFlBQVk7SUFDWixnQkFBZ0I7SUFDaEIsaUJBQWlCO0FBQ3JCO0FBQ0E7SUFDSSxrQkFBa0I7QUFDdEI7QUFDQTtJQUNJLFNBQVM7QUFDYjtBQUNBO0lBQ0ksY0FBYztJQUNkLFlBQVk7SUFDWixnQkFBZ0I7SUFDaEI7QUFFQTtRQUNJLFdBQVc7SUFDZiIsImZpbGUiOiJzcmMvYXBwL2xvZ2luL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWF0LXRvb2xiYXJ7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIC8qIGJhY2tncm91bmQtY29sb3I6IHJnYig5NiwxMjUsMTM5KSAgKi9cclxufVxyXG4vKiAuYnV0dG9uLWdyZWVue1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDk2LDEyNSwxMzkpIDtcclxuICAgIGNvbG9yOndoaXRlO1xyXG59ICovXHJcbi5yZWdpc3RlcntcclxuICAgIGZsb2F0OiByaWdodDtcclxufVxyXG4ucmVnaXN0ZXItc3BhbntcclxuICAgIGZsb2F0OiByaWdodDtcclxuICAgIG1hcmdpbi10b3A6IDEwcHg7XHJcbiAgICBtYXJnaW4tcmlnaHQ6IDVweDtcclxufVxyXG4uZmlsbC1yZW1haW5pbmctc3BhY2V7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuLmVycm9ye1xyXG4gICAgY29sb3I6cmVkO1xyXG59XHJcbi5mb3JtLWJvZHl7XHJcbiAgICBtYXJnaW46IDAgYXV0bztcclxuICAgIHdpZHRoOiA1MDBweDtcclxuICAgIG1hcmdpbi10b3A6MTAwcHg7XHJcbiAgICB9XHJcbiAgICBcclxuICAgIC5mb3JtLWZ1bGwtd2lkdGggLmZvcm0tZWxlbWVudHtcclxuICAgICAgICB3aWR0aDo1MDBweDtcclxuICAgIH0iXX0= */"
+module.exports = ".mat-toolbar{\r\n    justify-content: center;\r\n}\r\n.register{\r\n    float: right;\r\n}\r\n.register-span{\r\n    float: right;\r\n    margin-top: 10px;\r\n    margin-right: 5px;\r\n}\r\n.fill-remaining-space{\r\n    text-align: center;\r\n}\r\n.error{\r\n    color:red;\r\n}\r\n.form-body{\r\n    margin: 0 auto;\r\n    width: 500px;\r\n    margin-top:100px;\r\n}\r\n.form-full-width .form-element{\r\n    width:500px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbG9naW4vbG9naW4vbG9naW4uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLHVCQUF1QjtBQUMzQjtBQUNBO0lBQ0ksWUFBWTtBQUNoQjtBQUNBO0lBQ0ksWUFBWTtJQUNaLGdCQUFnQjtJQUNoQixpQkFBaUI7QUFDckI7QUFDQTtJQUNJLGtCQUFrQjtBQUN0QjtBQUNBO0lBQ0ksU0FBUztBQUNiO0FBQ0E7SUFDSSxjQUFjO0lBQ2QsWUFBWTtJQUNaLGdCQUFnQjtBQUNwQjtBQUVBO0lBQ0ksV0FBVztBQUNmIiwiZmlsZSI6InNyYy9hcHAvbG9naW4vbG9naW4vbG9naW4uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYXQtdG9vbGJhcntcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG59XHJcbi5yZWdpc3RlcntcclxuICAgIGZsb2F0OiByaWdodDtcclxufVxyXG4ucmVnaXN0ZXItc3BhbntcclxuICAgIGZsb2F0OiByaWdodDtcclxuICAgIG1hcmdpbi10b3A6IDEwcHg7XHJcbiAgICBtYXJnaW4tcmlnaHQ6IDVweDtcclxufVxyXG4uZmlsbC1yZW1haW5pbmctc3BhY2V7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuLmVycm9ye1xyXG4gICAgY29sb3I6cmVkO1xyXG59XHJcbi5mb3JtLWJvZHl7XHJcbiAgICBtYXJnaW46IDAgYXV0bztcclxuICAgIHdpZHRoOiA1MDBweDtcclxuICAgIG1hcmdpbi10b3A6MTAwcHg7XHJcbn1cclxuICAgIFxyXG4uZm9ybS1mdWxsLXdpZHRoIC5mb3JtLWVsZW1lbnR7XHJcbiAgICB3aWR0aDo1MDBweDtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -258,7 +265,7 @@ module.exports = ".mat-toolbar{\r\n    justify-content: center;\r\n    /* backgr
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-toolbar color=\"primary\">\n  <span class=\"fill-remaining-space\">Login</span>\n</mat-toolbar>\n<form [formGroup]=\"loginForm\" (ngSubmit)=\"onSubmit(loginForm.value)\" class=\"form form-full-width\">\n\n  <div class=\"form-body\">\n    <div *ngIf=\"invalidCredentials\" class=\"error-msg\">\n      <p class=\"error\">Invalid Credentials</p>\n    </div>\n    <mat-form-field class=\"form-element\">\n      <input name=\"email\" matInput placeholder=\"Email\" formControlName=\"email\" />\n    </mat-form-field>\n    <div\n      *ngIf=\"loginForm.controls['email'].errors && (loginForm.controls['email'].dirty && loginForm.controls['email'].touched )\"\n      class=\"error-msg\">\n      <span class=\"error\" [hidden]=\"!loginForm.controls['email'].errors.required\">Email is required.</span>\n      <span class=\"error\" [hidden]=\"!loginForm.controls['email'].errors.email\">Email is invalid.</span>\n    </div>\n    <br />\n    <mat-form-field class=\"form-element\">\n      <input type=\"password\" name=\"password\" matInput placeholder=\"Password\" formControlName=\"password\">\n    </mat-form-field>\n    <div\n      *ngIf=\"loginForm.controls['password'].errors && (loginForm.controls['password'].dirty && loginForm.controls['password'].touched )\"\n      class=\"error-msg\">\n      <span class=\"error\" [hidden]=\"!loginForm.controls['password'].errors.required\">Password is required.</span>\n    </div>\n\n    <div class=\"form-element\">\n      <button mat-raised-button color=\"primary\" type=\"submit\"  class=\"button\" [disabled]=\"!loginForm.valid\">Login\n      </button>\n    \n      <button mat-raised-button  (click)=\"navigateToRegister()\" color=\"primary\" class=\"button register\">Register\n      </button>\n      <span class=\"register-span\"> Not a member? Register here </span>\n    </div>\n  </div>\n</form>"
+module.exports = "<mat-toolbar color=\"primary\">\n  <span class=\"fill-remaining-space\">Login</span>\n</mat-toolbar>\n\n<form [formGroup]=\"loginForm\" (ngSubmit)=\"onSubmit(loginForm.value)\" class=\"form form-full-width\">\n  <div class=\"form-body\">\n\n    <div *ngIf=\"invalidCredentials\" class=\"error-msg\">\n      <p class=\"error\">Invalid Credentials</p>\n    </div>\n\n    <mat-form-field class=\"form-element\">\n      <input name=\"email\" matInput placeholder=\"Email\" formControlName=\"email\" />\n    </mat-form-field>\n    <div\n      *ngIf=\"loginForm.controls['email'].errors && (loginForm.controls['email'].dirty && loginForm.controls['email'].touched )\"\n      class=\"error-msg\">\n      <span class=\"error\" [hidden]=\"!loginForm.controls['email'].errors.required\">Email is required.</span>\n      <span class=\"error\" [hidden]=\"!loginForm.controls['email'].errors.email\">Email is invalid.</span>\n    </div>\n\n    <br />\n\n    <mat-form-field class=\"form-element\">\n      <input type=\"password\" name=\"password\" matInput placeholder=\"Password\" formControlName=\"password\">\n    </mat-form-field>\n    <div\n      *ngIf=\"loginForm.controls['password'].errors && (loginForm.controls['password'].dirty && loginForm.controls['password'].touched )\"\n      class=\"error-msg\">\n      <span class=\"error\" [hidden]=\"!loginForm.controls['password'].errors.required\">Password is required.</span>\n    </div>\n\n    <div class=\"form-element\">\n      <button mat-raised-button color=\"primary\" type=\"submit\" class=\"button\" [disabled]=\"!loginForm.valid\"><i class=\"fa fa-user\"></i> Login\n      </button>\n\n      <button mat-raised-button (click)=\"navigateToRegister()\" color=\"primary\" class=\"button register\"><i class=\"fa fa-address-book\"></i> Register\n      </button>\n      <span class=\"register-span\"> Not a member? Register here </span>\n    </div>\n  </div>\n</form>"
 
 /***/ }),
 
@@ -275,13 +282,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var src_app_shared_auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/shared/auth.service */ "./src/app/shared/auth.service.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _shared_services_auth_auth_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../shared/services/auth/auth.service */ "./src/app/shared/services/auth/auth.service.ts");
 
 
 
 
 
+/**
+ * This component deals with the functionality of login
+ *
+ * @export
+ * @class LoginComponent
+ * @implements {OnInit}
+ */
 var LoginComponent = /** @class */ (function () {
     function LoginComponent(router, formBuilder, authService) {
         this.router = router;
@@ -289,25 +303,38 @@ var LoginComponent = /** @class */ (function () {
         this.authService = authService;
         this.invalidCredentials = false;
     }
+    /**
+     * Build login form using form builder
+     * @memberOf LoginComponent
+     */
     LoginComponent.prototype.ngOnInit = function () {
         this.loginForm = this.formBuilder.group({
             email: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].email]],
             password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
         });
     };
+    /**
+     * This method deals with the login afte user presses login button
+     * @param {any} form
+     *
+     * @memberOf LoginComponent
+     */
     LoginComponent.prototype.onSubmit = function (form) {
         var _this = this;
         this.authService.checkCredentials(this.loginForm.value).subscribe(function (value) {
             if (value != null && value.length > 0) {
-                _this.authService.login();
+                _this.authService.login(value[0]);
                 _this.router.navigateByUrl('/onBoard/form');
             }
             else {
-                console.log("invalid");
                 _this.invalidCredentials = true;
             }
         });
     };
+    /**
+     * If user chooses to register navigate to register page
+     * @memberOf LoginComponent
+     */
     LoginComponent.prototype.navigateToRegister = function () {
         this.router.navigateByUrl('/register');
     };
@@ -317,7 +344,7 @@ var LoginComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./login.component.html */ "./src/app/login/login/login.component.html"),
             styles: [__webpack_require__(/*! ./login.component.css */ "./src/app/login/login/login.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"], src_app_shared_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"], _shared_services_auth_auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"]])
     ], LoginComponent);
     return LoginComponent;
 }());
@@ -326,32 +353,32 @@ var LoginComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/login/register/register/register.component.css":
-/*!****************************************************************!*\
-  !*** ./src/app/login/register/register/register.component.css ***!
-  \****************************************************************/
+/***/ "./src/app/login/register/register.component.css":
+/*!*******************************************************!*\
+  !*** ./src/app/login/register/register.component.css ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".mat-toolbar{\r\n    justify-content: center;\r\n}\r\n.fill-remaining-space{\r\n    text-align: center;\r\n}\r\n.error{\r\n    color:red;\r\n}\r\n.form-body{\r\n    margin: 0 auto;\r\n    width: 500px;\r\n    margin-top:100px;\r\n    }\r\n.form-full-width .form-element{\r\n        width:500px;\r\n    }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbG9naW4vcmVnaXN0ZXIvcmVnaXN0ZXIvcmVnaXN0ZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLHVCQUF1QjtBQUMzQjtBQUNBO0lBQ0ksa0JBQWtCO0FBQ3RCO0FBQ0E7SUFDSSxTQUFTO0FBQ2I7QUFDQTtJQUNJLGNBQWM7SUFDZCxZQUFZO0lBQ1osZ0JBQWdCO0lBQ2hCO0FBRUE7UUFDSSxXQUFXO0lBQ2YiLCJmaWxlIjoic3JjL2FwcC9sb2dpbi9yZWdpc3Rlci9yZWdpc3Rlci9yZWdpc3Rlci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1hdC10b29sYmFye1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbn1cclxuLmZpbGwtcmVtYWluaW5nLXNwYWNle1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcbi5lcnJvcntcclxuICAgIGNvbG9yOnJlZDtcclxufVxyXG4uZm9ybS1ib2R5e1xyXG4gICAgbWFyZ2luOiAwIGF1dG87XHJcbiAgICB3aWR0aDogNTAwcHg7XHJcbiAgICBtYXJnaW4tdG9wOjEwMHB4O1xyXG4gICAgfVxyXG4gICAgXHJcbiAgICAuZm9ybS1mdWxsLXdpZHRoIC5mb3JtLWVsZW1lbnR7XHJcbiAgICAgICAgd2lkdGg6NTAwcHg7XHJcbiAgICB9Il19 */"
+module.exports = ".mat-toolbar{\r\n    justify-content: center;\r\n}\r\n.fill-remaining-space{\r\n    text-align: center;\r\n}\r\n.error{\r\n    color:red;\r\n}\r\n.form-body{\r\n    margin: 0 auto;\r\n    width: 500px;\r\n    margin-top:100px;\r\n}\r\n.form-full-width .form-element{\r\n    width:500px;\r\n }\r\n.button-reset{\r\n     margin-left:20px;\r\n }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbG9naW4vcmVnaXN0ZXIvcmVnaXN0ZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLHVCQUF1QjtBQUMzQjtBQUNBO0lBQ0ksa0JBQWtCO0FBQ3RCO0FBQ0E7SUFDSSxTQUFTO0FBQ2I7QUFDQTtJQUNJLGNBQWM7SUFDZCxZQUFZO0lBQ1osZ0JBQWdCO0FBQ3BCO0FBRUE7SUFDSSxXQUFXO0NBQ2Q7QUFDQTtLQUNJLGdCQUFnQjtDQUNwQiIsImZpbGUiOiJzcmMvYXBwL2xvZ2luL3JlZ2lzdGVyL3JlZ2lzdGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWF0LXRvb2xiYXJ7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxufVxyXG4uZmlsbC1yZW1haW5pbmctc3BhY2V7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuLmVycm9ye1xyXG4gICAgY29sb3I6cmVkO1xyXG59XHJcbi5mb3JtLWJvZHl7XHJcbiAgICBtYXJnaW46IDAgYXV0bztcclxuICAgIHdpZHRoOiA1MDBweDtcclxuICAgIG1hcmdpbi10b3A6MTAwcHg7XHJcbn1cclxuICAgIFxyXG4uZm9ybS1mdWxsLXdpZHRoIC5mb3JtLWVsZW1lbnR7XHJcbiAgICB3aWR0aDo1MDBweDtcclxuIH1cclxuIC5idXR0b24tcmVzZXR7XHJcbiAgICAgbWFyZ2luLWxlZnQ6MjBweDtcclxuIH0iXX0= */"
 
 /***/ }),
 
-/***/ "./src/app/login/register/register/register.component.html":
-/*!*****************************************************************!*\
-  !*** ./src/app/login/register/register/register.component.html ***!
-  \*****************************************************************/
+/***/ "./src/app/login/register/register.component.html":
+/*!********************************************************!*\
+  !*** ./src/app/login/register/register.component.html ***!
+  \********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-toolbar color=\"primary\">\n  <span class=\"fill-remaining-space\">Register</span>\n</mat-toolbar>\n<form [formGroup]=\"registerForm\" (ngSubmit)=\"onSubmit(registerForm.value)\" class=\"form form-full-width\">\n \n  <div class=\"form-body\">\n      <div *ngIf=\"invalidCredentials\" class=\"error-msg\">\n          <p class=\"error\" >Invalid Credentials</p>\n        </div>\n    <mat-form-field class=\"form-element\">\n      <input name=\"email\" matInput placeholder=\"Email\" formControlName=\"email\"  />\n    </mat-form-field>\n    <div *ngIf=\"registerForm.controls['email'].errors && (registerForm.controls['email'].dirty && registerForm.controls['email'].touched )\" class=\"error-msg\">\n      <span class=\"error\" [hidden]=\"!registerForm.controls['email'].errors.required\">Email is required.</span>\n      <span class=\"error\" [hidden]=\"!registerForm.controls['email'].errors.email\">Email is invalid.</span> \n    </div>\n    <br />\n    <mat-form-field class=\"form-element\">\n      <input type=\"password\" name=\"password\" matInput placeholder=\"Password\" formControlName=\"password\">\n    </mat-form-field> \n    <div *ngIf=\"registerForm.controls['password'].errors && (registerForm.controls['password'].dirty && registerForm.controls['password'].touched )\" class=\"error-msg\">\n      <span class=\"error\" [hidden]=\"!registerForm.controls['password'].errors.required\">Password is required.</span>\n    </div>\n\n  <div class=\"form-element\">\n    <button mat-raised-button color=\"primary\" type=\"submit\"  [disabled]=\"!registerForm.valid\">Register\n    </button>\n  </div>\n</div>\n</form>"
+module.exports = "<mat-toolbar color=\"primary\">\n  <span class=\"fill-remaining-space\">Register</span>\n</mat-toolbar>\n<form [formGroup]=\"registerForm\" class=\"form form-full-width\">\n\n  <div class=\"form-body\">\n    <div *ngIf=\"doesEmailExist\" class=\"error-msg\">\n      <p class=\"error\">Email Id already exists</p>\n    </div>\n\n    <mat-form-field class=\"form-element\">\n      <input name=\"username\" matInput placeholder=\"User Name\" formControlName=\"username\" />\n    </mat-form-field>\n    <div\n      *ngIf=\"registerForm.controls['username'].errors && (registerForm.controls['username'].dirty && registerForm.controls['username'].touched )\"\n      class=\"error-msg\">\n      <span class=\"error\" [hidden]=\"!registerForm.controls['username'].errors.required\">Username is required.</span>\n    </div>\n\n    <mat-form-field class=\"form-element\">\n      <input name=\"email\" matInput placeholder=\"Email\" formControlName=\"email\" />\n    </mat-form-field>\n    <div\n      *ngIf=\"registerForm.controls['email'].errors && (registerForm.controls['email'].dirty && registerForm.controls['email'].touched )\"\n      class=\"error-msg\">\n      <span class=\"error\" [hidden]=\"!registerForm.controls['email'].errors.required\">Email is required.</span>\n      <span class=\"error\" [hidden]=\"!registerForm.controls['email'].errors.email\">Email is invalid.</span>\n    </div>\n\n    <br />\n\n    <mat-form-field class=\"form-element\">\n      <input type=\"password\" name=\"password\" matInput placeholder=\"Password\" formControlName=\"password\">\n    </mat-form-field>\n    <div\n      *ngIf=\"registerForm.controls['password'].errors && (registerForm.controls['password'].dirty && registerForm.controls['password'].touched )\"\n      class=\"error-msg\">\n      <span class=\"error\" [hidden]=\"!registerForm.controls['password'].errors.required\">Password is required.</span>\n    </div>\n\n    <div class=\"form-element\">\n      <button mat-raised-button color=\"primary\" (click)=\"onSubmit(registerForm.value)\" type=\"submit\"\n        [disabled]=\"!registerForm.valid\"><i class=\"fa fa-address-book\"></i> Register\n      </button>\n\n      <button mat-raised-button (click)=\"reset()\" color=\"accent\" type=\"reset\" class=\"button-reset\"\n        [disabled]=\"isDisabled\"><i class=\"fa fa-undo\"></i>\n        Reset</button>\n    </div>\n  </div>\n</form>"
 
 /***/ }),
 
-/***/ "./src/app/login/register/register/register.component.ts":
-/*!***************************************************************!*\
-  !*** ./src/app/login/register/register/register.component.ts ***!
-  \***************************************************************/
+/***/ "./src/app/login/register/register.component.ts":
+/*!******************************************************!*\
+  !*** ./src/app/login/register/register.component.ts ***!
+  \******************************************************/
 /*! exports provided: RegisterComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -361,46 +388,77 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var src_app_shared_auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/shared/auth.service */ "./src/app/shared/auth.service.ts");
+/* harmony import */ var _shared_services_auth_auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/services/auth/auth.service */ "./src/app/shared/services/auth/auth.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
 
 
 
 
 
 
+/**
+ *
+ * This component is used for registering user for access to application
+ * @export
+ * @class RegisterComponent
+ * @implements {OnInit}
+ */
 var RegisterComponent = /** @class */ (function () {
-    function RegisterComponent(snackBar, router, formBuilder, authService) {
-        this.snackBar = snackBar;
+    function RegisterComponent(toastr, router, formBuilder, authService) {
+        this.toastr = toastr;
         this.router = router;
         this.formBuilder = formBuilder;
         this.authService = authService;
     }
     RegisterComponent.prototype.ngOnInit = function () {
         this.registerForm = this.formBuilder.group({
+            username: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             email: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].email]],
             password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
         });
     };
+    /**
+     * method called when user clicks register after filling all the fields
+     * If email already exists validation error appears
+     *  After registering it navigates to login page
+     * @param {any} form
+     *
+     * @memberOf RegisterComponent
+     */
     RegisterComponent.prototype.onSubmit = function (form) {
         var _this = this;
-        this.authService.registerUser(this.registerForm.value).subscribe(function (value) {
-            console.log("User registered");
-            _this.router.navigateByUrl('/login');
-            _this.snackBar.open('register success ! Try login now', '', {
-                duration: 2000,
-                verticalPosition: 'top'
-            });
+        this.authService.checkCredentials(this.registerForm.value).subscribe(function (value) {
+            if (value != null && value.length > 0) {
+                _this.doesEmailExist = true;
+                _this.reset();
+            }
+            else {
+                _this.authService.registerUser(_this.registerForm.value).subscribe(function (value) {
+                    _this.router.navigateByUrl('/login');
+                    _this.toastr.success("Registeration successful! Please try login now");
+                });
+            }
         });
+    };
+    /**
+     * This method is used to reset form
+     *
+     *
+     * @memberOf RegisterComponent
+     */
+    RegisterComponent.prototype.reset = function () {
+        this.registerForm.reset();
+        this.registerForm.markAsPristine();
+        this.registerForm.markAsUntouched();
     };
     RegisterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-register',
-            template: __webpack_require__(/*! ./register.component.html */ "./src/app/login/register/register/register.component.html"),
-            styles: [__webpack_require__(/*! ./register.component.css */ "./src/app/login/register/register/register.component.css")]
+            template: __webpack_require__(/*! ./register.component.html */ "./src/app/login/register/register.component.html"),
+            styles: [__webpack_require__(/*! ./register.component.css */ "./src/app/login/register/register.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"], src_app_shared_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"], _shared_services_auth_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"]])
     ], RegisterComponent);
     return RegisterComponent;
 }());
@@ -416,7 +474,7 @@ var RegisterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<div mat-dialog-content>\r\n  <p>{{message}}</p>\r\n</div>\r\n<div mat-dialog-actions>\r\n  <button mat-button (click)=\"onNoClick()\">No Thanks</button>\r\n  <button mat-button [mat-dialog-close]=\"agreed\" cdkFocusInitial>Yes</button>\r\n</div>\r\n"
+module.exports = "<div mat-dialog-content>\r\n  <p>{{message}}</p>\r\n</div>\r\n<div mat-dialog-actions>\r\n  <button mat-button (click)=\"onNoClick()\">No Thanks</button>\r\n  <button mat-button [mat-dialog-close]=\"agreed\" cdkFocusInitial>Yes</button>\r\n</div>"
 
 /***/ }),
 
@@ -436,6 +494,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+/**
+ * This component is used to make confirmation alerts for users
+ * The confirmation alerts have yes / no as options
+ * @export
+ * @class ConfirmationDialog
+ */
 var ConfirmationDialog = /** @class */ (function () {
     function ConfirmationDialog(dialogRef, data) {
         this.dialogRef = dialogRef;
@@ -574,14 +638,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _on_boarding_on_boarding_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./on-boarding/on-boarding.component */ "./src/app/on-board/on-boarding/on-boarding.component.ts");
-/* harmony import */ var _on_boarding_form_on_boarding_form_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./on-boarding-form/on-boarding-form.component */ "./src/app/on-board/on-boarding-form/on-boarding-form.component.ts");
-/* harmony import */ var _student_list_student_list_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./student-list/student-list.component */ "./src/app/on-board/student-list/student-list.component.ts");
-/* harmony import */ var _student_detail_student_detail_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./student-detail/student-detail.component */ "./src/app/on-board/student-detail/student-detail.component.ts");
-/* harmony import */ var _on_boarding_header_on_boarding_header_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./on-boarding-header/on-boarding-header.component */ "./src/app/on-board/on-boarding-header/on-boarding-header.component.ts");
-/* harmony import */ var _material_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./material.module */ "./src/app/on-board/material.module.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _shared_filter_pipe__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../shared/filter.pipe */ "./src/app/shared/filter.pipe.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _on_boarding_on_boarding_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./on-boarding/on-boarding.component */ "./src/app/on-board/on-boarding/on-boarding.component.ts");
+/* harmony import */ var _on_boarding_form_on_boarding_form_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./on-boarding-form/on-boarding-form.component */ "./src/app/on-board/on-boarding-form/on-boarding-form.component.ts");
+/* harmony import */ var _student_list_student_list_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./student-list/student-list.component */ "./src/app/on-board/student-list/student-list.component.ts");
+/* harmony import */ var _student_detail_student_detail_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./student-detail/student-detail.component */ "./src/app/on-board/student-detail/student-detail.component.ts");
+/* harmony import */ var _on_boarding_header_on_boarding_header_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./on-boarding-header/on-boarding-header.component */ "./src/app/on-board/on-boarding-header/on-boarding-header.component.ts");
+/* harmony import */ var _material_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./material.module */ "./src/app/on-board/material.module.ts");
+/* harmony import */ var _shared_pipe_filter_pipe__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../shared/pipe/filter.pipe */ "./src/app/shared/pipe/filter.pipe.ts");
 /* harmony import */ var _on_board_confirmation_dialog_confirmation_dialog_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../on-board/confirmation-dialog/confirmation-dialog.component */ "./src/app/on-board/confirmation-dialog/confirmation-dialog.component.ts");
 
 
@@ -604,16 +668,16 @@ var OnboardingAppModule = /** @class */ (function () {
     }
     OnboardingAppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-            declarations: [_on_board_confirmation_dialog_confirmation_dialog_component__WEBPACK_IMPORTED_MODULE_14__["ConfirmationDialog"], _on_boarding_on_boarding_component__WEBPACK_IMPORTED_MODULE_6__["OnboardingComponent"], _on_boarding_form_on_boarding_form_component__WEBPACK_IMPORTED_MODULE_7__["OnboardingFormComponent"], _student_list_student_list_component__WEBPACK_IMPORTED_MODULE_8__["StudentsListComponent"], _student_detail_student_detail_component__WEBPACK_IMPORTED_MODULE_9__["StudentDetailComponent"], _on_boarding_header_on_boarding_header_component__WEBPACK_IMPORTED_MODULE_10__["OnboardingHeaderComponent"], _shared_filter_pipe__WEBPACK_IMPORTED_MODULE_13__["FilterPipe"]],
-            exports: [_on_boarding_on_boarding_component__WEBPACK_IMPORTED_MODULE_6__["OnboardingComponent"]],
+            declarations: [_on_board_confirmation_dialog_confirmation_dialog_component__WEBPACK_IMPORTED_MODULE_14__["ConfirmationDialog"], _on_boarding_on_boarding_component__WEBPACK_IMPORTED_MODULE_7__["OnboardingComponent"], _on_boarding_form_on_boarding_form_component__WEBPACK_IMPORTED_MODULE_8__["OnboardingFormComponent"], _student_list_student_list_component__WEBPACK_IMPORTED_MODULE_9__["StudentsListComponent"], _student_detail_student_detail_component__WEBPACK_IMPORTED_MODULE_10__["StudentDetailComponent"], _on_boarding_header_on_boarding_header_component__WEBPACK_IMPORTED_MODULE_11__["OnboardingHeaderComponent"], _shared_pipe_filter_pipe__WEBPACK_IMPORTED_MODULE_13__["FilterPipe"]],
+            exports: [_on_boarding_on_boarding_component__WEBPACK_IMPORTED_MODULE_7__["OnboardingComponent"]],
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["NoopAnimationsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"],
-                _material_module__WEBPACK_IMPORTED_MODULE_11__["MaterialModule"],
+                _material_module__WEBPACK_IMPORTED_MODULE_12__["MaterialModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
-                _angular_router__WEBPACK_IMPORTED_MODULE_12__["RouterModule"]
+                _angular_router__WEBPACK_IMPORTED_MODULE_6__["RouterModule"]
             ],
             entryComponents: [_on_board_confirmation_dialog_confirmation_dialog_component__WEBPACK_IMPORTED_MODULE_14__["ConfirmationDialog"]]
         })
@@ -632,7 +696,7 @@ var OnboardingAppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".mat-toolbar{\r\n    justify-content: center;\r\n}\r\n.mat-toolbar-row, .mat-toolbar-single-row{\r\n    height:40px;\r\n}\r\n.form-body{\r\nmargin: 0 auto;\r\nwidth: 500px;\r\n}\r\n.form-full-width .form-element{\r\n    width:500px;\r\n}\r\n.error{\r\n    color:red;\r\n}\r\n.required-symbol{\r\n    color:red;\r\n    font-weight: 800;\r\n\r\n}\r\n.mat-checkbox-background{\r\n    background-color: #3f51b5;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvb24tYm9hcmQvb24tYm9hcmRpbmctZm9ybS9vbi1ib2FyZGluZy1mb3JtLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSx1QkFBdUI7QUFDM0I7QUFDQTtJQUNJLFdBQVc7QUFDZjtBQUNBO0FBQ0EsY0FBYztBQUNkLFlBQVk7QUFDWjtBQUVBO0lBQ0ksV0FBVztBQUNmO0FBQ0E7SUFDSSxTQUFTO0FBQ2I7QUFDQTtJQUNJLFNBQVM7SUFDVCxnQkFBZ0I7O0FBRXBCO0FBQ0E7SUFDSSx5QkFBeUI7QUFDN0IiLCJmaWxlIjoic3JjL2FwcC9vbi1ib2FyZC9vbi1ib2FyZGluZy1mb3JtL29uLWJvYXJkaW5nLWZvcm0uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYXQtdG9vbGJhcntcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG59XHJcbi5tYXQtdG9vbGJhci1yb3csIC5tYXQtdG9vbGJhci1zaW5nbGUtcm93e1xyXG4gICAgaGVpZ2h0OjQwcHg7XHJcbn1cclxuLmZvcm0tYm9keXtcclxubWFyZ2luOiAwIGF1dG87XHJcbndpZHRoOiA1MDBweDtcclxufVxyXG5cclxuLmZvcm0tZnVsbC13aWR0aCAuZm9ybS1lbGVtZW50e1xyXG4gICAgd2lkdGg6NTAwcHg7XHJcbn1cclxuLmVycm9ye1xyXG4gICAgY29sb3I6cmVkO1xyXG59XHJcbi5yZXF1aXJlZC1zeW1ib2x7XHJcbiAgICBjb2xvcjpyZWQ7XHJcbiAgICBmb250LXdlaWdodDogODAwO1xyXG5cclxufVxyXG4ubWF0LWNoZWNrYm94LWJhY2tncm91bmR7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjM2Y1MWI1O1xyXG59Il19 */"
+module.exports = ".mat-toolbar{\r\n    justify-content: center;\r\n}\r\n.mat-toolbar-row, .mat-toolbar-single-row{\r\n    height:40px;\r\n}\r\n.form-body{\r\nmargin: 0 auto;\r\nwidth: 500px;\r\n}\r\n.form-full-width .form-element{\r\n    width:500px;\r\n}\r\n.error{\r\n    color:red;\r\n}\r\n.required-symbol{\r\n    color:red;\r\n    font-weight: 800;\r\n}\r\n.button-reset{\r\n    margin-left:20px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvb24tYm9hcmQvb24tYm9hcmRpbmctZm9ybS9vbi1ib2FyZGluZy1mb3JtLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSx1QkFBdUI7QUFDM0I7QUFDQTtJQUNJLFdBQVc7QUFDZjtBQUNBO0FBQ0EsY0FBYztBQUNkLFlBQVk7QUFDWjtBQUVBO0lBQ0ksV0FBVztBQUNmO0FBQ0E7SUFDSSxTQUFTO0FBQ2I7QUFDQTtJQUNJLFNBQVM7SUFDVCxnQkFBZ0I7QUFDcEI7QUFDQTtJQUNJLGdCQUFnQjtBQUNwQiIsImZpbGUiOiJzcmMvYXBwL29uLWJvYXJkL29uLWJvYXJkaW5nLWZvcm0vb24tYm9hcmRpbmctZm9ybS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1hdC10b29sYmFye1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbn1cclxuLm1hdC10b29sYmFyLXJvdywgLm1hdC10b29sYmFyLXNpbmdsZS1yb3d7XHJcbiAgICBoZWlnaHQ6NDBweDtcclxufVxyXG4uZm9ybS1ib2R5e1xyXG5tYXJnaW46IDAgYXV0bztcclxud2lkdGg6IDUwMHB4O1xyXG59XHJcblxyXG4uZm9ybS1mdWxsLXdpZHRoIC5mb3JtLWVsZW1lbnR7XHJcbiAgICB3aWR0aDo1MDBweDtcclxufVxyXG4uZXJyb3J7XHJcbiAgICBjb2xvcjpyZWQ7XHJcbn1cclxuLnJlcXVpcmVkLXN5bWJvbHtcclxuICAgIGNvbG9yOnJlZDtcclxuICAgIGZvbnQtd2VpZ2h0OiA4MDA7XHJcbn1cclxuLmJ1dHRvbi1yZXNldHtcclxuICAgIG1hcmdpbi1sZWZ0OjIwcHg7XHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -643,7 +707,7 @@ module.exports = ".mat-toolbar{\r\n    justify-content: center;\r\n}\r\n.mat-too
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"form-container\">\n\n  <div class=\"form-body\" novalidate>\n    <form [formGroup]=\"onBoardForm\" (ngSubmit)=\"onSubmit(onBoardForm.value)\" class=\"form form-full-width\">\n\n      <div>\n        <mat-form-field class=\"form-element\">\n          <input name=\"studentName\" matInput placeholder=\"Student Name\" formControlName=\"studentName\">\n        </mat-form-field>\n        <div\n          *ngIf=\"onBoardForm.controls['studentName'].errors && (onBoardForm.controls['studentName'].dirty && onBoardForm.controls['studentName'].touched )\"\n          class=\"error-msg\">\n          <span class=\"error\" [hidden]=\"!onBoardForm.controls['studentName'].errors.required\">Student Name is\n            required.</span>\n        </div>\n        <br />\n        <mat-form-field class=\"form-element\">\n          <mat-label>Student category (required)</mat-label>\n          <select #category (change)=\"onSelectingCategory(category.value)\" matNativeControl id=\"category\"\n            formControlName=\"category\">\n            <option *ngFor=\"let c of categories\" [value]=\"c\">{{ c }}</option>\n          </select>\n        </mat-form-field>\n        <div\n          *ngIf=\"onBoardForm.controls['category'].errors && (onBoardForm.controls['category'].dirty && onBoardForm.controls['category'].touched )\"\n          class=\"error-msg\">\n          <span class=\"error\" [hidden]=\"!onBoardForm.controls['category'].errors.required\">Student Name is\n            required.</span>\n        </div>\n\n        <br />\n        <div formGroupName=\"documents\">\n          <mat-label class=\"form-element\">Documents</mat-label>\n          <br />\n          <div class=\"form-element\">\n            <mat-checkbox matInput formControlName=\"domicile\" value=\"1\">Domicile<span class=\"required-symbol\">*</span>\n            </mat-checkbox>\n          </div>\n          <div *ngIf=\"onBoardForm.get('documents.domicile').errors \" class=\"error-msg\">\n            <span class=\"error\">Domicile Certificate is\n              required.</span>\n          </div>\n\n          <div class=\"form-element\">\n            <mat-checkbox formControlName=\"birthCertificate\" value=\"1\">Birth Certificate<span\n                class=\"required-symbol\">*</span></mat-checkbox>\n          </div>\n          <div *ngIf=\"onBoardForm.get('documents.birthCertificate').errors \" class=\"error-msg\">\n            <span class=\"error\">Birth Certificate is\n              required.</span>\n          </div>\n\n          <div class=\"form-element\">\n            <mat-checkbox formControlName=\"markSheets\" value=\"1\">Mark Sheets<span class=\"required-symbol\">*</span>\n            </mat-checkbox>\n          </div>\n          <div *ngIf=\"onBoardForm.get('documents.markSheets').errors \" class=\"error-msg\">\n            <span class=\"error\">Mark Sheet is\n              required.</span>\n          </div>\n\n          <div class=\"form-element\">\n            <mat-checkbox formControlName=\"policeClearance\" value=\"1\">Police Clearance<span\n                *ngIf=\"category.value=='International'\" class=\"required-symbol\">*</span></mat-checkbox>\n          </div>\n          <div *ngIf=\"onBoardForm.get('documents.policeClearance').errors \" class=\"error-msg\">\n            <span class=\"error\">Police Clearance is\n              required.</span>\n          </div>\n          <div class=\"form-element\">\n            <mat-checkbox formControlName=\"passport\" value=\"1\">Passport<span *ngIf=\"category.value=='International'\"\n                class=\"required-symbol\">*</span></mat-checkbox>\n          </div>\n          <div *ngIf=\"onBoardForm.get('documents.passport').errors \" class=\"error-msg\">\n            <span class=\"error\">Passport is\n              required.</span>\n          </div>\n          <div class=\"form-element\">\n            <mat-checkbox formControlName=\"declaration\" value=\"1\">Declaration <span\n                *ngIf=\"category.value=='International'\" class=\"required-symbol\">*</span></mat-checkbox>\n          </div>\n          <div *ngIf=\"onBoardForm.get('documents.declaration').errors \" class=\"error-msg\">\n            <span class=\"error\">Declaration is required.</span>\n          </div>\n        </div>\n\n        <mat-form-field class=\"form-element\">\n          <input matInput [matDatepicker]=\"myDatepicker\" placeholder=\"DOB(mm/dd/yyyy)\" formControlName=\"dob\">\n          <mat-datepicker-toggle matSuffix [for]=\"myDatepicker\"></mat-datepicker-toggle>\n          <mat-datepicker #myDatepicker></mat-datepicker>\n        </mat-form-field>\n        <div *ngIf=\"onBoardForm.controls['dob'].errors && (onBoardForm.controls['dob'].dirty )\" class=\"error-msg\">\n          <span class=\"error\" [hidden]=\"!onBoardForm.controls['dob'].errors.required\">DOB is\n            required.</span>\n        </div>\n        <br />\n\n        <mat-form-field class=\"form-element\">\n          <input name=\"fatherName\" matInput placeholder=\"Father's Name\" formControlName=\"fatherName\">\n        </mat-form-field>\n        <div\n          *ngIf=\"onBoardForm.controls['fatherName'].errors && (onBoardForm.controls['fatherName'].dirty && onBoardForm.controls['fatherName'].touched )\"\n          class=\"error-msg\">\n          <span class=\"error\" [hidden]=\"!onBoardForm.controls['fatherName'].errors.required\">Father's Name is\n            required.</span>\n        </div>\n        <br />\n\n        <mat-form-field class=\"form-element\">\n          <input name=\"motherName\" matInput placeholder=\"Mother's Name\" formControlName=\"motherName\">\n        </mat-form-field>\n\n        <div\n          *ngIf=\"onBoardForm.controls['motherName'].errors && (onBoardForm.controls['motherName'].dirty && onBoardForm.controls['motherName'].touched )\"\n          class=\"error-msg\">\n          <span class=\"error\" [hidden]=\"!onBoardForm.controls['motherName'].errors.required\">Mother's Name is\n            required.</span>\n        </div>\n        <br />\n\n        <mat-form-field class=\"form-element\">\n          <input type=\"number\" name=\"lastClassScore\" matInput placeholder=\"Last class score\"\n            formControlName=\"lastClassScore\">\n        </mat-form-field>\n        <div\n          *ngIf=\"onBoardForm.controls['lastClassScore'].errors && (onBoardForm.controls['lastClassScore'].dirty && onBoardForm.controls['lastClassScore'].touched )\"\n          class=\"error-msg\">\n          <span class=\"error\" [hidden]=\"!onBoardForm.controls['lastClassScore'].errors.required\">Last class score is\n            required.</span>\n        </div>\n        <div class=\"form-element\">\n          <button mat-raised-button color=\"primary\" type=\"submit\" class=\"button-green\"\n            [disabled]=\"!onBoardForm.valid\">On\n            Board</button>\n        </div>\n      </div>\n    </form>\n  </div>\n</div>"
+module.exports = "<div class=\"form-container\">\n\n  <div class=\"form-body\" novalidate>\n    <form [formGroup]=\"onBoardForm\" class=\"form form-full-width\">\n      <div>\n        <br />\n\n        <mat-form-field class=\"form-element\">\n          <input name=\"studentName\" matInput placeholder=\"Student Name\" formControlName=\"studentName\">\n        </mat-form-field>\n        <div\n          *ngIf=\"onBoardForm.controls['studentName'].errors && (onBoardForm.controls['studentName'].dirty && onBoardForm.controls['studentName'].touched )\"\n          class=\"error-msg\">\n          <span class=\"error\" [hidden]=\"!onBoardForm.controls['studentName'].errors.required\">Student Name is\n            required.</span>\n        </div>\n\n        <br />\n        <br />\n\n        <mat-form-field class=\"form-element\">\n          <mat-label>Student category (required)</mat-label>\n          <select #category (change)=\"onSelectingCategory(category.value)\" matNativeControl id=\"category\"\n            formControlName=\"category\">\n            <option *ngFor=\"let c of categories\" [value]=\"c\">{{ c }}</option>\n          </select>\n        </mat-form-field>\n        <div\n          *ngIf=\"onBoardForm.controls['category'].errors && (onBoardForm.controls['category'].dirty && onBoardForm.controls['category'].touched )\"\n          class=\"error-msg\">\n          <span class=\"error\" [hidden]=\"!onBoardForm.controls['category'].errors.required\">Student Name is\n            required.</span>\n        </div>\n\n        <br />\n\n        <div formGroupName=\"documents\">\n          <mat-label class=\"form-element\">Documents</mat-label>\n          <br />\n          <br />\n\n          <div class=\"form-element\">\n            <mat-checkbox matInput formControlName=\"domicile\" value=\"1\">Domicile<span class=\"required-symbol\">*</span>\n            </mat-checkbox>\n          </div>\n          <div *ngIf=\"(onBoardForm.get('documents.domicile').errors && !onBoardForm.get('documents.domicile').pristine)\"\n            class=\"error-msg\">\n            <span class=\"error\">Domicile Certificate is\n              required.</span>\n          </div>\n\n          <div class=\"form-element\">\n            <mat-checkbox formControlName=\"birthCertificate\" value=\"1\">Birth Certificate<span\n                class=\"required-symbol\">*</span></mat-checkbox>\n          </div>\n          <div\n            *ngIf=\"(onBoardForm.get('documents.birthCertificate').errors && !onBoardForm.get('documents.birthCertificate').pristine)\"\n            class=\"error-msg\">\n            <span class=\"error\">Birth Certificate is\n              required.</span>\n          </div>\n\n          <div class=\"form-element\">\n            <mat-checkbox formControlName=\"markSheets\" value=\"1\">Mark Sheets<span class=\"required-symbol\">*</span>\n            </mat-checkbox>\n          </div>\n          <div\n            *ngIf=\"(onBoardForm.get('documents.markSheets').errors && !onBoardForm.get('documents.markSheets').pristine)\"\n            class=\"error-msg\">\n            <span class=\"error\">Mark Sheet is\n              required.</span>\n          </div>\n\n          <div class=\"form-element\">\n            <mat-checkbox formControlName=\"policeClearance\" value=\"1\">Police Clearance<span\n                *ngIf=\"(student!=null && student.category=='International') || category.value =='International'\"\n                class=\"required-symbol\">*</span>\n            </mat-checkbox>\n          </div>\n          <div\n            *ngIf=\"(onBoardForm.get('documents.policeClearance').errors && !onBoardForm.get('documents.policeClearance').pristine)\"\n            class=\"error-msg\">\n            <span class=\"error\">Police Clearance is\n              required.</span>\n          </div>\n\n          <div class=\"form-element\">\n            <mat-checkbox formControlName=\"passport\" value=\"1\">Passport<span\n                *ngIf=\"(student!=null && student.category=='International') || category.value =='International'\"\n                class=\"required-symbol\">*</span>\n            </mat-checkbox>\n          </div>\n          <div *ngIf=\"(onBoardForm.get('documents.passport').errors && !onBoardForm.get('documents.passport').pristine)\"\n            class=\"error-msg\">\n            <span class=\"error\">Passport is\n              required.</span>\n          </div>\n\n          <div class=\"form-element\">\n            <mat-checkbox formControlName=\"declaration\" value=\"1\">Declaration <span class=\"required-symbol\">*</span>\n            </mat-checkbox>\n          </div>\n          <div\n            *ngIf=\"(onBoardForm.get('documents.declaration').errors && !onBoardForm.get('documents.declaration').pristine)\"\n            class=\"error-msg\">\n            <span class=\"error\">Declaration is required.</span>\n          </div>\n        </div>\n\n        <mat-form-field class=\"form-element\">\n          <input matInput [matDatepicker]=\"myDatepicker\" placeholder=\"DOB(mm/dd/yyyy)\" formControlName=\"dob\">\n          <mat-datepicker-toggle matSuffix [for]=\"myDatepicker\"></mat-datepicker-toggle>\n          <mat-datepicker #myDatepicker></mat-datepicker>\n        </mat-form-field>\n        <div *ngIf=\"onBoardForm.controls['dob'].errors && (onBoardForm.controls['dob'].dirty )\" class=\"error-msg\">\n          <span class=\"error\" [hidden]=\"!onBoardForm.controls['dob'].errors.required\">DOB is\n            required.</span>\n          <span class=\"error\" [hidden]=\"!onBoardForm.controls['dob'].errors.invalidDob\">Student must be of atleast 3\n            years</span>\n        </div>\n\n        <br />\n\n        <mat-form-field class=\"form-element\">\n          <input name=\"fatherName\" matInput placeholder=\"Father's Name\" formControlName=\"fatherName\">\n        </mat-form-field>\n        <div\n          *ngIf=\"onBoardForm.controls['fatherName'].errors && (onBoardForm.controls['fatherName'].dirty && onBoardForm.controls['fatherName'].touched )\"\n          class=\"error-msg\">\n          <span class=\"error\" [hidden]=\"!onBoardForm.controls['fatherName'].errors.required\">Father's Name is\n            required.</span>\n        </div>\n\n        <br />\n\n        <mat-form-field class=\"form-element\">\n          <input name=\"motherName\" matInput placeholder=\"Mother's Name\" formControlName=\"motherName\">\n        </mat-form-field>\n        <div\n          *ngIf=\"onBoardForm.controls['motherName'].errors && (onBoardForm.controls['motherName'].dirty && onBoardForm.controls['motherName'].touched )\"\n          class=\"error-msg\">\n          <span class=\"error\" [hidden]=\"!onBoardForm.controls['motherName'].errors.required\">Mother's Name is\n            required.</span>\n        </div>\n\n        <br />\n\n        <mat-form-field class=\"form-element\">\n          <input type=\"number\" name=\"lastClassScore\" matInput placeholder=\"Last class score\"\n            formControlName=\"lastClassScore\">\n        </mat-form-field>\n        <div\n          *ngIf=\"onBoardForm.controls['lastClassScore'].errors && (onBoardForm.controls['lastClassScore'].dirty && onBoardForm.controls['lastClassScore'].touched )\"\n          class=\"error-msg\">\n          <span class=\"error\" [hidden]=\"!onBoardForm.controls['lastClassScore'].errors.required\">Last class score is\n            required.</span>\n        </div>\n\n        <div class=\"form-element\">\n          <button mat-raised-button (click)=\"onSubmit(onBoardForm.value)\" color=\"primary\" type=\"submit\"\n            class=\"button-green\" [disabled]=\"!onBoardForm.valid || isDisabled\"><i class=\"fa fa-user-plus\"></i> On\n            Board</button>\n            \n            <button mat-raised-button (click)=\"reset()\" color=\"accent\" type=\"reset\"\n            class=\"button-reset\" [disabled]=\"isDisabled\"><i class=\"fa fa-undo\"></i> \n            Reset</button>\n        </div>\n      </div>\n    </form>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -660,48 +724,79 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _shared_student_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/student.service */ "./src/app/shared/student.service.ts");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _shared_services_student_student_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../shared/services/student/student.service */ "./src/app/shared/services/student/student.service.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
 
 
 
 
 
 
+/**
+ * This component is used to display an on boarding form.
+ * This component can be used to onboard , edit , view students through a form.
+ * @export
+ * @class OnboardingFormComponent
+ * @implements {OnInit}
+ */
 var OnboardingFormComponent = /** @class */ (function () {
-    function OnboardingFormComponent(snackBar, fb, studentService) {
-        var _this = this;
-        this.snackBar = snackBar;
+    /**
+     * Creates an instance of OnboardingFormComponent.
+     * @param {ToastrService} toastr
+     * @param {FormBuilder} fb
+     * @param {StudentService} studentService
+     *
+     * @memberOf OnboardingFormComponent
+     */
+    function OnboardingFormComponent(toastr, fb, studentService) {
+        this.toastr = toastr;
         this.fb = fb;
         this.studentService = studentService;
         this.student = null;
         this.students = [];
         this.isDisabled = false;
         this.categories = ['Domestic', 'International'];
-        this.startDate = new Date(1990, 0, 1);
+    }
+    /**
+     * Used to fetch data for edit and initialize form
+     * @memberOf OnboardingFormComponent
+     */
+    OnboardingFormComponent.prototype.ngOnInit = function () {
+        this.fetchDataForEdit();
+        this.initializeForm();
+    };
+    /**
+     * Fetch data for edit if present
+     * @memberOf OnboardingFormComponent
+     */
+    OnboardingFormComponent.prototype.fetchDataForEdit = function () {
+        var _this = this;
         this.studentService.getStudentDataForEdit().subscribe(function (value) {
             if (value != null) {
                 _this.student = value.student;
                 _this.isDisabled = value.disabled;
             }
         });
-    }
-    OnboardingFormComponent.prototype.ngOnInit = function () {
-        console.log("On init");
-        console.log(this.student);
+    };
+    /**
+     * Initialize form with edit data for edit operation if present
+     * else initialize with default values for add operation
+     * @memberOf OnboardingFormComponent
+     */
+    OnboardingFormComponent.prototype.initializeForm = function () {
         this.onBoardForm = this.fb.group({
             id: [this.student != null ? this.student.id : 0],
             studentName: [{ value: this.student != null ? this.student.studentName : '', disabled: this.isDisabled }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].maxLength(50)]],
             category: [{ value: this.student != null ? this.student.category : 'Domestic', disabled: this.isDisabled }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
             documents: this.fb.group({
-                domicile: [{ value: this.student != null ? this.student.documents.domicile : '', disabled: this.isDisabled }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].pattern('true')]],
-                birthCertificate: [{ value: this.student != null ? this.student.documents.birthCertificate : '', disabled: this.isDisabled }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].pattern('true')]],
-                markSheets: [{ value: this.student != null ? this.student.documents.birthCertificate : '', disabled: this.isDisabled }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].pattern('true')]],
-                policeClearance: [{ value: this.student != null ? this.student.documents.policeClearance : '', disabled: this.isDisabled }],
-                passport: [{ value: this.student != null ? this.student.documents.passport : '', disabled: this.isDisabled }],
-                declaration: [{ value: this.student != null ? this.student.documents.declaration : '', disabled: this.isDisabled }]
+                domicile: [{ value: this.student != null ? this.student.documents.domicile : false, disabled: this.isDisabled }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].pattern('true')]],
+                birthCertificate: [{ value: this.student != null ? this.student.documents.birthCertificate : false, disabled: this.isDisabled }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].pattern('true')]],
+                markSheets: [{ value: this.student != null ? this.student.documents.birthCertificate : false, disabled: this.isDisabled }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].pattern('true')]],
+                policeClearance: [{ value: this.student != null ? this.student.documents.policeClearance : false, disabled: this.isDisabled }],
+                passport: [{ value: this.student != null ? this.student.documents.passport : false, disabled: this.isDisabled }],
+                declaration: [{ value: this.student != null ? this.student.documents.declaration : false, disabled: this.isDisabled }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].pattern('true')]]
             }),
-            dob: [{ value: this.student != null ? this.student.dob : '', disabled: this.isDisabled }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            dob: [{ value: this.student != null ? this.student.dob : '', disabled: this.isDisabled }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, this.dateValidator()]],
             fatherName: [{ value: this.student != null ? this.student.fatherName : '', disabled: this.isDisabled }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].maxLength(50)]],
             motherName: [{ value: this.student != null ? this.student.motherName : '', disabled: this.isDisabled }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].maxLength(50)]],
             lastClassScore: [{ value: this.student != null ? this.student.lastClassScore : '', disabled: this.isDisabled }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
@@ -709,67 +804,97 @@ var OnboardingFormComponent = /** @class */ (function () {
         if (this.student != null)
             this.onSelectingCategory(this.student.category);
     };
+    /**
+     * method called when user clicks on submit button.
+     * If id field is present it will edit else it will update.
+     * @param {NgForm} form
+     *
+     * @memberOf OnboardingFormComponent
+     */
     OnboardingFormComponent.prototype.onSubmit = function (form) {
-        var _this = this;
         this.student = this.onBoardForm.value;
-        if (this.student.id != undefined) {
-            //edit
-            this.studentService.updateStudent(this.student).subscribe(function (value) {
-                _this.snackBar.open('Success', '', {
-                    duration: 2000,
-                    verticalPosition: 'top'
-                });
-                _this.studentService.sendStudentData();
-            });
+        if (this.student.id != 0 && this.student.id != null) {
+            this.edit();
         }
         else {
-            // insert
-            this.studentService.getNextIdForStudent().subscribe(function (value) {
-                _this.student.id = value;
-            });
-            this.studentService.addStudent(this.student).subscribe(function (value) {
-                _this.snackBar.open('Success', '', {
-                    duration: 2000,
-                    verticalPosition: 'top'
-                });
-                _this.studentService.sendStudentData();
-            });
+            this.add();
         }
+        this.reset();
     };
+    /**
+     * method used to edit student
+     * @memberOf OnboardingFormComponent
+     */
+    OnboardingFormComponent.prototype.edit = function () {
+        var _this = this;
+        this.studentService.updateStudent(this.student).subscribe(function (value) {
+            _this.toastr.success('Updated successfully');
+            _this.studentService.sendStudentData();
+            _this.student = null;
+        });
+    };
+    /**
+     * method used to add student
+     * @memberOf OnboardingFormComponent
+     */
+    OnboardingFormComponent.prototype.add = function () {
+        var _this = this;
+        this.studentService.getNextIdForStudent().subscribe(function (value) {
+            _this.student.id = value;
+            _this.studentService.addStudent(_this.student).subscribe(function (value) {
+                _this.toastr.success('OnBoarded Sucessfully');
+                _this.studentService.sendStudentData();
+                _this.student = null;
+            });
+        });
+    };
+    /**
+     * Used to reset the form after onboarding
+     * @memberOf OnboardingFormComponent
+     */
+    OnboardingFormComponent.prototype.reset = function () {
+        this.onBoardForm.reset();
+        this.onBoardForm.markAsPristine();
+        this.onBoardForm.markAsUntouched();
+    };
+    /**
+     * this method is used to change documents that are required depending upon category
+     * @param {string} category
+     *
+     * @memberOf OnboardingFormComponent
+     */
     OnboardingFormComponent.prototype.onSelectingCategory = function (category) {
+        console.log(category);
         var policeClearanceControl = this.onBoardForm.get('documents.policeClearance');
         var passportControl = this.onBoardForm.get('documents.passport');
-        var declarationControl = this.onBoardForm.get('documents.declaration');
         if (category == "International") {
-            console.log("international");
             policeClearanceControl.setValidators(_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].pattern('true'));
             passportControl.setValidators(_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].pattern('true'));
-            declarationControl.setValidators(_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].pattern('true'));
         }
         else {
+            console.log("clearing validators");
             policeClearanceControl.clearValidators();
             passportControl.clearValidators();
-            declarationControl.clearValidators();
         }
         policeClearanceControl.updateValueAndValidity();
         passportControl.updateValueAndValidity();
-        declarationControl.updateValueAndValidity();
     };
-    OnboardingFormComponent.prototype.getStudent = function (id) {
-        var _this = this;
-        console.log(id);
-        this.studentService.getStudent(id).subscribe(function (value) {
-            _this.student = value;
-            console.log(_this.student);
-        });
-    };
-    OnboardingFormComponent.prototype.getStudents = function () {
-        var _this = this;
-        this.studentService.getStudents().subscribe(function (value) {
-            console.log(value);
-            _this.students = value;
-            console.log(_this.students);
-        });
+    /**
+     * This custom validator is used to perform date of birth validation
+     * Student with age 3 years and above is allowed
+     * @returns {ValidatorFn}
+     *
+     * @memberOf OnboardingFormComponent
+     */
+    OnboardingFormComponent.prototype.dateValidator = function () {
+        return function (control) {
+            var dateStr = control.value;
+            var dateEntered = new Date(dateStr);
+            var currentDate = new Date();
+            if (currentDate.getFullYear() - dateEntered.getFullYear() < 3) {
+                return { "invalidDob": "Student must be of atleast 3 years;" };
+            }
+        };
     };
     OnboardingFormComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -777,7 +902,7 @@ var OnboardingFormComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./on-boarding-form.component.html */ "./src/app/on-board/on-boarding-form/on-boarding-form.component.html"),
             styles: [__webpack_require__(/*! ./on-boarding-form.component.css */ "./src/app/on-board/on-boarding-form/on-boarding-form.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_4__["MatSnackBar"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"], _shared_student_service__WEBPACK_IMPORTED_MODULE_3__["StudentService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"], _shared_services_student_student_service__WEBPACK_IMPORTED_MODULE_3__["StudentService"]])
     ], OnboardingFormComponent);
     return OnboardingFormComponent;
 }());
@@ -793,7 +918,7 @@ var OnboardingFormComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".mat-toolbar{\r\n    justify-content: center;\r\n}\r\n.mat-tab-nav-bar{\r\n    background-color: #3f51b5 !important;\r\n    color:white;\r\n}\r\n.mat-tab-link{\r\n   \r\n    color:white;\r\n}\r\n.logout-button{\r\n    margin-top:-40px;\r\n    float: right;\r\n }\r\n.mat-tab-group{\r\n    clear: right;\r\n}\r\n.mat-tab-label, .mat-tab-link {\r\n        font-size: 20px;\r\n        font-weight: 400;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvb24tYm9hcmQvb24tYm9hcmRpbmctaGVhZGVyL29uLWJvYXJkaW5nLWhlYWRlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksdUJBQXVCO0FBQzNCO0FBQ0E7SUFDSSxvQ0FBb0M7SUFDcEMsV0FBVztBQUNmO0FBQ0E7O0lBRUksV0FBVztBQUNmO0FBRUE7SUFDSSxnQkFBZ0I7SUFDaEIsWUFBWTtDQUNmO0FBQ0Q7SUFDSSxZQUFZO0FBQ2hCO0FBRUE7UUFDUSxlQUFlO1FBQ2YsZ0JBQWdCO0FBQ3hCIiwiZmlsZSI6InNyYy9hcHAvb24tYm9hcmQvb24tYm9hcmRpbmctaGVhZGVyL29uLWJvYXJkaW5nLWhlYWRlci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1hdC10b29sYmFye1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbn1cclxuLm1hdC10YWItbmF2LWJhcntcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMzZjUxYjUgIWltcG9ydGFudDtcclxuICAgIGNvbG9yOndoaXRlO1xyXG59XHJcbi5tYXQtdGFiLWxpbmt7XHJcbiAgIFxyXG4gICAgY29sb3I6d2hpdGU7XHJcbn1cclxuXHJcbi5sb2dvdXQtYnV0dG9ue1xyXG4gICAgbWFyZ2luLXRvcDotNDBweDtcclxuICAgIGZsb2F0OiByaWdodDtcclxuIH1cclxuLm1hdC10YWItZ3JvdXB7XHJcbiAgICBjbGVhcjogcmlnaHQ7XHJcbn1cclxuXHJcbi5tYXQtdGFiLWxhYmVsLCAubWF0LXRhYi1saW5rIHtcclxuICAgICAgICBmb250LXNpemU6IDIwcHg7XHJcbiAgICAgICAgZm9udC13ZWlnaHQ6IDQwMDtcclxufSJdfQ== */"
+module.exports = ".mat-toolbar{\r\n    justify-content: center;\r\n}\r\n.mat-tab-nav-bar{\r\n    background-color: #3f51b5 !important;\r\n    color:white;\r\n}\r\n.mat-tab-link{\r\n   \r\n    color:white;\r\n}\r\n.logout-button-div{\r\n    margin-top:-40px;\r\n    float: right;\r\n }\r\n.mat-tab-group{\r\n    clear: right;\r\n}\r\n.mat-raised-text {\r\n    color:white;\r\n    box-sizing: border-box;\r\n    position: relative;\r\n    -webkit-user-select: none;\r\n    -moz-user-select: none;\r\n    -ms-user-select: none;\r\n    user-select: none;\r\n    cursor: pointer;\r\n    outline: 0;\r\n    border: none;\r\n    -webkit-tap-highlight-color: transparent;\r\n    display: inline-block;\r\n    white-space: nowrap;\r\n    text-decoration: none;\r\n    vertical-align: baseline;\r\n    text-align: center;\r\n    margin: 0;\r\n    min-width: 64px;\r\n    line-height: 36px;\r\n    padding: 0 16px;\r\n    border-radius: 4px;\r\n    overflow: visible;\r\n    -webkit-transform: translate3d(0,0,0);\r\n            transform: translate3d(0,0,0);\r\n    transition: background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);\r\n}\r\n.mat-tab-label, .mat-tab-link {\r\n        font-size: 20px;\r\n        font-weight: 400;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvb24tYm9hcmQvb24tYm9hcmRpbmctaGVhZGVyL29uLWJvYXJkaW5nLWhlYWRlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksdUJBQXVCO0FBQzNCO0FBQ0E7SUFDSSxvQ0FBb0M7SUFDcEMsV0FBVztBQUNmO0FBQ0E7O0lBRUksV0FBVztBQUNmO0FBRUE7SUFDSSxnQkFBZ0I7SUFDaEIsWUFBWTtDQUNmO0FBQ0Q7SUFDSSxZQUFZO0FBQ2hCO0FBQ0E7SUFDSSxXQUFXO0lBQ1gsc0JBQXNCO0lBQ3RCLGtCQUFrQjtJQUNsQix5QkFBeUI7SUFDekIsc0JBQXNCO0lBQ3RCLHFCQUFxQjtJQUNyQixpQkFBaUI7SUFDakIsZUFBZTtJQUNmLFVBQVU7SUFDVixZQUFZO0lBQ1osd0NBQXdDO0lBQ3hDLHFCQUFxQjtJQUNyQixtQkFBbUI7SUFDbkIscUJBQXFCO0lBQ3JCLHdCQUF3QjtJQUN4QixrQkFBa0I7SUFDbEIsU0FBUztJQUNULGVBQWU7SUFDZixpQkFBaUI7SUFDakIsZUFBZTtJQUNmLGtCQUFrQjtJQUNsQixpQkFBaUI7SUFDakIscUNBQTZCO1lBQTdCLDZCQUE2QjtJQUM3Qiw4RkFBOEY7QUFDbEc7QUFFQTtRQUNRLGVBQWU7UUFDZixnQkFBZ0I7QUFDeEIiLCJmaWxlIjoic3JjL2FwcC9vbi1ib2FyZC9vbi1ib2FyZGluZy1oZWFkZXIvb24tYm9hcmRpbmctaGVhZGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWF0LXRvb2xiYXJ7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxufVxyXG4ubWF0LXRhYi1uYXYtYmFye1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzNmNTFiNSAhaW1wb3J0YW50O1xyXG4gICAgY29sb3I6d2hpdGU7XHJcbn1cclxuLm1hdC10YWItbGlua3tcclxuICAgXHJcbiAgICBjb2xvcjp3aGl0ZTtcclxufVxyXG5cclxuLmxvZ291dC1idXR0b24tZGl2e1xyXG4gICAgbWFyZ2luLXRvcDotNDBweDtcclxuICAgIGZsb2F0OiByaWdodDtcclxuIH1cclxuLm1hdC10YWItZ3JvdXB7XHJcbiAgICBjbGVhcjogcmlnaHQ7XHJcbn1cclxuLm1hdC1yYWlzZWQtdGV4dCB7XHJcbiAgICBjb2xvcjp3aGl0ZTtcclxuICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICAtd2Via2l0LXVzZXItc2VsZWN0OiBub25lO1xyXG4gICAgLW1vei11c2VyLXNlbGVjdDogbm9uZTtcclxuICAgIC1tcy11c2VyLXNlbGVjdDogbm9uZTtcclxuICAgIHVzZXItc2VsZWN0OiBub25lO1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgb3V0bGluZTogMDtcclxuICAgIGJvcmRlcjogbm9uZTtcclxuICAgIC13ZWJraXQtdGFwLWhpZ2hsaWdodC1jb2xvcjogdHJhbnNwYXJlbnQ7XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xyXG4gICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xyXG4gICAgdmVydGljYWwtYWxpZ246IGJhc2VsaW5lO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgbWFyZ2luOiAwO1xyXG4gICAgbWluLXdpZHRoOiA2NHB4O1xyXG4gICAgbGluZS1oZWlnaHQ6IDM2cHg7XHJcbiAgICBwYWRkaW5nOiAwIDE2cHg7XHJcbiAgICBib3JkZXItcmFkaXVzOiA0cHg7XHJcbiAgICBvdmVyZmxvdzogdmlzaWJsZTtcclxuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlM2QoMCwwLDApO1xyXG4gICAgdHJhbnNpdGlvbjogYmFja2dyb3VuZCAuNHMgY3ViaWMtYmV6aWVyKC4yNSwuOCwuMjUsMSksYm94LXNoYWRvdyAyODBtcyBjdWJpYy1iZXppZXIoLjQsMCwuMiwxKTtcclxufVxyXG5cclxuLm1hdC10YWItbGFiZWwsIC5tYXQtdGFiLWxpbmsge1xyXG4gICAgICAgIGZvbnQtc2l6ZTogMjBweDtcclxuICAgICAgICBmb250LXdlaWdodDogNDAwO1xyXG59Il19 */"
 
 /***/ }),
 
@@ -804,7 +929,7 @@ module.exports = ".mat-toolbar{\r\n    justify-content: center;\r\n}\r\n.mat-tab
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<nav mat-tab-nav-bar mat-align-tabs=\"center\">\r\n    <a mat-tab-link [routerLink]=\"['form']\" routerLinkActive #rla=\"routerLinkActive\" [active]=\"rla.isActive\">\r\n\r\n        On Boarding Form\r\n    </a>\r\n    <a mat-tab-link [routerLink]=\"['studentlist']\" routerLinkActive #rla1=\"routerLinkActive\" [active]=\"rla1.isActive\">\r\n\r\n        Student List\r\n    </a>\r\n   \r\n</nav>\r\n<button class=\"logout-button\" mat-raised-button color=\"accent\" (click)='logout()'>Logout</button>\r\n\r\n\r\n<router-outlet></router-outlet>"
+module.exports = "<nav mat-tab-nav-bar mat-align-tabs=\"center\">\r\n    <a mat-tab-link [routerLink]=\"['form']\" routerLinkActive #rla=\"routerLinkActive\" [active]=\"rla.isActive\">\r\n        On Boarding Form\r\n    </a>\r\n    <a mat-tab-link [routerLink]=\"['studentlist']\" routerLinkActive #rla1=\"routerLinkActive\" [active]=\"rla1.isActive\">\r\n        Student List\r\n    </a>\r\n</nav>\r\n\r\n<div class=\"logout-button-div\">\r\n    <p class=\"mat-raised-text\">Hi, {{userName}}</p>\r\n    <button class=\"logout-button\" mat-raised-button color=\"accent\" (click)='logout()'>Logout</button>\r\n</div>\r\n\r\n<router-outlet></router-outlet>"
 
 /***/ }),
 
@@ -820,19 +945,49 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OnboardingHeaderComponent", function() { return OnboardingHeaderComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _shared_auth_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/auth.service */ "./src/app/shared/auth.service.ts");
+/* harmony import */ var _shared_services_auth_auth_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/services/auth/auth.service */ "./src/app/shared/services/auth/auth.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 
 
 
 
+/**
+ * This component is used to set the nav bars in header.
+ * It also sets the Logged in user name and logout button in header
+ * @export
+ * @class OnboardingHeaderComponent
+ * @implements {OnInit}
+ */
 var OnboardingHeaderComponent = /** @class */ (function () {
+    /**
+     * Creates an instance of OnboardingHeaderComponent.
+     * @param {AuthService} authService
+     * @param {Router} router
+     *
+     * @memberOf OnboardingHeaderComponent
+     */
     function OnboardingHeaderComponent(authService, router) {
         this.authService = authService;
         this.router = router;
+        this.userName = '';
     }
     OnboardingHeaderComponent.prototype.ngOnInit = function () {
+        this.getLoggedInUserDetail();
     };
+    /**
+     * Get Logged in user detail to show username on header
+     * @memberOf OnboardingHeaderComponent
+     */
+    OnboardingHeaderComponent.prototype.getLoggedInUserDetail = function () {
+        var user = this.authService.getLoggedInUser();
+        if (user != null) {
+            this.userName = user.username;
+        }
+    };
+    /**
+     * Log out user
+     * @memberOf OnboardingHeaderComponent
+     */
     OnboardingHeaderComponent.prototype.logout = function () {
         this.authService.logout();
         this.router.navigateByUrl('/login');
@@ -843,7 +998,7 @@ var OnboardingHeaderComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./on-boarding-header.component.html */ "./src/app/on-board/on-boarding-header/on-boarding-header.component.html"),
             styles: [__webpack_require__(/*! ./on-boarding-header.component.css */ "./src/app/on-board/on-boarding-header/on-boarding-header.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_services_auth_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
     ], OnboardingHeaderComponent);
     return OnboardingHeaderComponent;
 }());
@@ -888,6 +1043,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 
 
+/**
+ * This component is the main component and contains the child components
+ * The child components are onboarding form and student list
+ *
+ * @export
+ * @class OnboardingComponent
+ * @implements {OnInit}
+ */
 var OnboardingComponent = /** @class */ (function () {
     function OnboardingComponent() {
     }
@@ -915,7 +1078,7 @@ var OnboardingComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "mat-card-content{\r\n    margin-left:20px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvb24tYm9hcmQvc3R1ZGVudC1kZXRhaWwvc3R1ZGVudC1kZXRhaWwuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGdCQUFnQjtBQUNwQiIsImZpbGUiOiJzcmMvYXBwL29uLWJvYXJkL3N0dWRlbnQtZGV0YWlsL3N0dWRlbnQtZGV0YWlsLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJtYXQtY2FyZC1jb250ZW50e1xyXG4gICAgbWFyZ2luLWxlZnQ6MjBweDtcclxufSJdfQ== */"
+module.exports = "mat-card-content{\r\n    margin-left:20px;\r\n}\r\n.mat-raised-button{\r\n    font-size: 11px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvb24tYm9hcmQvc3R1ZGVudC1kZXRhaWwvc3R1ZGVudC1kZXRhaWwuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGdCQUFnQjtBQUNwQjtBQUNBO0lBQ0ksZUFBZTtBQUNuQiIsImZpbGUiOiJzcmMvYXBwL29uLWJvYXJkL3N0dWRlbnQtZGV0YWlsL3N0dWRlbnQtZGV0YWlsLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJtYXQtY2FyZC1jb250ZW50e1xyXG4gICAgbWFyZ2luLWxlZnQ6MjBweDtcclxufVxyXG4ubWF0LXJhaXNlZC1idXR0b257XHJcbiAgICBmb250LXNpemU6IDExcHg7XHJcbn0iXX0= */"
 
 /***/ }),
 
@@ -926,7 +1089,7 @@ module.exports = "mat-card-content{\r\n    margin-left:20px;\r\n}\r\n/*# sourceM
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<mat-card-header>\n      <mat-card-title>{{ student.studentName }} ({{student.category}})</mat-card-title>\n    \n    </mat-card-header>\n    <mat-card-content>\n      <div>\n        <p>{{student.dob|date}}</p>\n        <p>{{student.fatherName}}</p>\n        <p>{{student.motherName}}</p>\n        <p>{{student.lastClassScore}}</p>\n      </div>\n      </mat-card-content>\n    <mat-card-actions>\n      <button mat-button (click)=\"openDialoginEditMode(student)\" >Edit</button>\n      <button mat-button (click)=\"openDialoginViewMode(student)\" >View</button>\n      <button mat-button (click)=\"deleteStudent(student.id)\">Delete</button>\n    </mat-card-actions>"
+module.exports = "<mat-card-header>\n  <mat-card-title>{{ student.studentName }} ({{student.category}})</mat-card-title>\n</mat-card-header>\n\n<mat-card-content>\n  <div>\n    <p>{{student.dob|date}}</p>\n    <p>{{student.fatherName}}</p>\n    <p>{{student.motherName}}</p>\n    <p>{{student.lastClassScore}}</p>\n  </div>\n</mat-card-content>\n\n<mat-card-actions>\n  <button mat-raised-button (click)=\"editStudent(student)\"><i class=\"fa fa-edit\"></i>Edit</button>\n  <button mat-raised-button (click)=\"viewStudent(student)\"><i class=\"fa fa-eye\"></i>View</button>\n  <button mat-raised-button (click)=\"deleteStudent(student.id)\"><i class=\"fa fa-trash\"></i>Delete</button>\n</mat-card-actions>"
 
 /***/ }),
 
@@ -942,18 +1105,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StudentDetailComponent", function() { return StudentDetailComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _shared_student_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/student.service */ "./src/app/shared/student.service.ts");
+/* harmony import */ var _shared_services_student_student_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/services/student/student.service */ "./src/app/shared/services/student/student.service.ts");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _confirmation_dialog_confirmation_dialog_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../confirmation-dialog/confirmation-dialog.component */ "./src/app/on-board/confirmation-dialog/confirmation-dialog.component.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
 
 
 
 
 
 
+
+/**
+ * Used to show student detail and edit, view, delete buttons in card format
+ *
+ * @export
+ * @class StudentDetailComponent
+ * @implements {OnInit}
+ */
 var StudentDetailComponent = /** @class */ (function () {
-    function StudentDetailComponent(router, dialog, studentService) {
+    function StudentDetailComponent(toastr, router, dialog, studentService) {
+        this.toastr = toastr;
         this.router = router;
         this.dialog = dialog;
         this.studentService = studentService;
@@ -961,20 +1134,35 @@ var StudentDetailComponent = /** @class */ (function () {
     }
     StudentDetailComponent.prototype.ngOnInit = function () {
     };
-    StudentDetailComponent.prototype.openDialoginEditMode = function (student) {
+    /**
+     * used to set value to be edited in behavior subject through service
+     * and navigate to onboardingform page
+     * @param {IStudent} student
+     *
+     * @memberOf StudentDetailComponent
+     */
+    StudentDetailComponent.prototype.editStudent = function (student) {
         this.studentService.sendStudentDataForEdit({ 'student': student, 'disabled': false });
         this.router.navigateByUrl('onBoard/form');
-        // console.log(student);
-        // const dialogRef = this.dialog.open(OnboardingFormComponent, {
-        //   height: '800px',
-        //   width: '600px',
-        //   data: {student:student}
-        // });
     };
-    StudentDetailComponent.prototype.openDialoginViewMode = function (student) {
+    /**
+     * used to view value to be edited in behavior subject through service
+     * and navigate to onboardingform page
+     * @param {IStudent} student
+     *
+     * @memberOf StudentDetailComponent
+     */
+    StudentDetailComponent.prototype.viewStudent = function (student) {
         this.studentService.sendStudentDataForEdit({ 'student': student, 'disabled': true });
         this.router.navigateByUrl('onBoard/form');
     };
+    /**
+     * used to prompt for deletion using dialog box and on yes selection
+     * it used to deleted student
+     * @param {number} id
+     *
+     * @memberOf StudentDetailComponent
+     */
     StudentDetailComponent.prototype.deleteStudent = function (id) {
         var _this = this;
         var dialogRef = this.dialog.open(_confirmation_dialog_confirmation_dialog_component__WEBPACK_IMPORTED_MODULE_5__["ConfirmationDialog"], {
@@ -983,9 +1171,9 @@ var StudentDetailComponent = /** @class */ (function () {
         });
         dialogRef.afterClosed().subscribe(function (result) {
             if (result == true) {
-                console.log(result);
                 _this.studentService.deleteStudent(id).subscribe(function (value) {
                     _this.studentService.sendStudentData();
+                    _this.toastr.success('Deleted successfully');
                 });
             }
         });
@@ -1000,7 +1188,7 @@ var StudentDetailComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./student-detail.component.html */ "./src/app/on-board/student-detail/student-detail.component.html"),
             styles: [__webpack_require__(/*! ./student-detail.component.css */ "./src/app/on-board/student-detail/student-detail.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDialog"], _shared_student_service__WEBPACK_IMPORTED_MODULE_2__["StudentService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastrService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDialog"], _shared_services_student_student_service__WEBPACK_IMPORTED_MODULE_2__["StudentService"]])
     ], StudentDetailComponent);
     return StudentDetailComponent;
 }());
@@ -1016,7 +1204,7 @@ var StudentDetailComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "mat-toolbar{\r\n    justify-content: center;\r\n    background-color: #2E4053;\r\n    color:white;\r\n}\r\nmat-card{\r\n    height:250px;\r\n    width:250px;\r\n    float:left;\r\n    margin:30px;\r\n}\r\n.mat-form-field{\r\n    margin-right:18px;\r\n}\r\n.button-green{\r\n    background-color: #16A085;\r\n    color:white;\r\n}\r\n.mat-toolbar-row, .mat-toolbar-single-row{\r\n    height:40px;\r\n}\r\n.international-student{\r\n    background-color:  #F6DDCC;\r\n    font-family: \"Times New Roman\", Times, serif;\r\n}\r\n.domestic-student{\r\n    background-color: #EBDEF0;\r\n    font-family: \"Times New Roman\", Times, serif;\r\n}\r\n.pull-right{\r\n   float: right; \r\n   margin-top: 20px;\r\n  \r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvb24tYm9hcmQvc3R1ZGVudC1saXN0L3N0dWRlbnQtbGlzdC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksdUJBQXVCO0lBQ3ZCLHlCQUF5QjtJQUN6QixXQUFXO0FBQ2Y7QUFDQTtJQUNJLFlBQVk7SUFDWixXQUFXO0lBQ1gsVUFBVTtJQUNWLFdBQVc7QUFDZjtBQUNBO0lBQ0ksaUJBQWlCO0FBQ3JCO0FBQ0E7SUFDSSx5QkFBeUI7SUFDekIsV0FBVztBQUNmO0FBQ0E7SUFDSSxXQUFXO0FBQ2Y7QUFDQTtJQUNJLDBCQUEwQjtJQUMxQiw0Q0FBNEM7QUFDaEQ7QUFDQTtJQUNJLHlCQUF5QjtJQUN6Qiw0Q0FBNEM7QUFDaEQ7QUFDQTtHQUNHLFlBQVk7R0FDWixnQkFBZ0I7O0FBRW5CIiwiZmlsZSI6InNyYy9hcHAvb24tYm9hcmQvc3R1ZGVudC1saXN0L3N0dWRlbnQtbGlzdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsibWF0LXRvb2xiYXJ7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMyRTQwNTM7XHJcbiAgICBjb2xvcjp3aGl0ZTtcclxufVxyXG5tYXQtY2FyZHtcclxuICAgIGhlaWdodDoyNTBweDtcclxuICAgIHdpZHRoOjI1MHB4O1xyXG4gICAgZmxvYXQ6bGVmdDtcclxuICAgIG1hcmdpbjozMHB4O1xyXG59XHJcbi5tYXQtZm9ybS1maWVsZHtcclxuICAgIG1hcmdpbi1yaWdodDoxOHB4O1xyXG59XHJcbi5idXR0b24tZ3JlZW57XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMTZBMDg1O1xyXG4gICAgY29sb3I6d2hpdGU7XHJcbn1cclxuLm1hdC10b29sYmFyLXJvdywgLm1hdC10b29sYmFyLXNpbmdsZS1yb3d7XHJcbiAgICBoZWlnaHQ6NDBweDtcclxufVxyXG4uaW50ZXJuYXRpb25hbC1zdHVkZW50e1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogICNGNkREQ0M7XHJcbiAgICBmb250LWZhbWlseTogXCJUaW1lcyBOZXcgUm9tYW5cIiwgVGltZXMsIHNlcmlmO1xyXG59XHJcbi5kb21lc3RpYy1zdHVkZW50e1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI0VCREVGMDtcclxuICAgIGZvbnQtZmFtaWx5OiBcIlRpbWVzIE5ldyBSb21hblwiLCBUaW1lcywgc2VyaWY7XHJcbn1cclxuLnB1bGwtcmlnaHR7XHJcbiAgIGZsb2F0OiByaWdodDsgXHJcbiAgIG1hcmdpbi10b3A6IDIwcHg7XHJcbiAgXHJcbn0iXX0= */"
+module.exports = "mat-toolbar{\r\n    justify-content: center;\r\n    background-color: #2E4053;\r\n    color:white;\r\n}\r\nmat-card{\r\n    height:250px;\r\n    width:250px;\r\n    float:left;\r\n    margin:30px;\r\n}\r\n.mat-form-field{\r\n    margin-right:18px;\r\n}\r\n.button-green{\r\n    background-color: #16A085;\r\n    color:white;\r\n}\r\n.mat-toolbar-row, .mat-toolbar-single-row{\r\n    height:40px;\r\n}\r\n.international-student{\r\n    background-color: #fec8da;\r\n    font-family: \"Times New Roman\", Times, serif;\r\n}\r\n.domestic-student{\r\n    background-color:whitesmoke;\r\n    font-family: \"Times New Roman\", Times, serif;\r\n}\r\n.pull-right{\r\n   float: right; \r\n   margin-top: 20px;\r\n  \r\n}\r\n.student-detail{\r\n    margin-top:80px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvb24tYm9hcmQvc3R1ZGVudC1saXN0L3N0dWRlbnQtbGlzdC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksdUJBQXVCO0lBQ3ZCLHlCQUF5QjtJQUN6QixXQUFXO0FBQ2Y7QUFDQTtJQUNJLFlBQVk7SUFDWixXQUFXO0lBQ1gsVUFBVTtJQUNWLFdBQVc7QUFDZjtBQUNBO0lBQ0ksaUJBQWlCO0FBQ3JCO0FBQ0E7SUFDSSx5QkFBeUI7SUFDekIsV0FBVztBQUNmO0FBQ0E7SUFDSSxXQUFXO0FBQ2Y7QUFDQTtJQUNJLHlCQUF5QjtJQUN6Qiw0Q0FBNEM7QUFDaEQ7QUFDQTtJQUNJLDJCQUEyQjtJQUMzQiw0Q0FBNEM7QUFDaEQ7QUFDQTtHQUNHLFlBQVk7R0FDWixnQkFBZ0I7O0FBRW5CO0FBQ0E7SUFDSSxlQUFlO0FBQ25CIiwiZmlsZSI6InNyYy9hcHAvb24tYm9hcmQvc3R1ZGVudC1saXN0L3N0dWRlbnQtbGlzdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsibWF0LXRvb2xiYXJ7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMyRTQwNTM7XHJcbiAgICBjb2xvcjp3aGl0ZTtcclxufVxyXG5tYXQtY2FyZHtcclxuICAgIGhlaWdodDoyNTBweDtcclxuICAgIHdpZHRoOjI1MHB4O1xyXG4gICAgZmxvYXQ6bGVmdDtcclxuICAgIG1hcmdpbjozMHB4O1xyXG59XHJcbi5tYXQtZm9ybS1maWVsZHtcclxuICAgIG1hcmdpbi1yaWdodDoxOHB4O1xyXG59XHJcbi5idXR0b24tZ3JlZW57XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMTZBMDg1O1xyXG4gICAgY29sb3I6d2hpdGU7XHJcbn1cclxuLm1hdC10b29sYmFyLXJvdywgLm1hdC10b29sYmFyLXNpbmdsZS1yb3d7XHJcbiAgICBoZWlnaHQ6NDBweDtcclxufVxyXG4uaW50ZXJuYXRpb25hbC1zdHVkZW50e1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZlYzhkYTtcclxuICAgIGZvbnQtZmFtaWx5OiBcIlRpbWVzIE5ldyBSb21hblwiLCBUaW1lcywgc2VyaWY7XHJcbn1cclxuLmRvbWVzdGljLXN0dWRlbnR7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOndoaXRlc21va2U7XHJcbiAgICBmb250LWZhbWlseTogXCJUaW1lcyBOZXcgUm9tYW5cIiwgVGltZXMsIHNlcmlmO1xyXG59XHJcbi5wdWxsLXJpZ2h0e1xyXG4gICBmbG9hdDogcmlnaHQ7IFxyXG4gICBtYXJnaW4tdG9wOiAyMHB4O1xyXG4gIFxyXG59XHJcbi5zdHVkZW50LWRldGFpbHtcclxuICAgIG1hcmdpbi10b3A6ODBweDtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -1027,7 +1215,7 @@ module.exports = "mat-toolbar{\r\n    justify-content: center;\r\n    background
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <mat-toolbar >\n  <span class=\"fill-remaining-space\">Student List</span>\n</mat-toolbar> -->\n<div class=\"pull-right\">\n  <mat-form-field>\n    <select class=\"select-dropdown\" (change)=\"selectStudentBasedOnCategory($event.target.value)\" matNativeControl required>\n      <option value=\"All\">All</option>\n      <option value=\"Domestic\">Domestic</option>\n      <option value=\"International\">International</option>\n    </select>\n  </mat-form-field>\n\n  <mat-form-field >\n      <input [(ngModel)]=\"searchText\" matInput placeholder=\"Enter student Name\">\n    </mat-form-field>\n</div> <div *ngFor=\"let student of students | filter : searchText\">\n  <mat-card\n    [ngClass]=\"{'domestic-student': student.category=='Domestic', 'international-student': student.category=='International'}\"\n    class=\"example-card\">\n    <app-student-detail [student]='student'></app-student-detail>\n  </mat-card>\n</div>"
+module.exports = "<div class=\"pull-right\">\n  <mat-form-field>\n    <select class=\"select-dropdown\" (change)=\"selectStudentBasedOnCategory($event.target.value)\" matNativeControl required>\n      <option value=\"All\">All</option>\n      <option value=\"Domestic\">Domestic</option>\n      <option value=\"International\">International</option>\n    </select>\n  </mat-form-field>\n\n  <mat-form-field >\n      <input [(ngModel)]=\"searchText\" matInput placeholder=\"Enter student Name\">\n    </mat-form-field>\n</div> \n<div class=\"student-detail\" *ngFor=\"let student of students | filter : searchText\"> \n  <mat-card\n    [ngClass]=\"{'domestic-student': student.category=='Domestic', 'international-student': student.category=='International'}\"\n    class=\"example-card\">\n    <app-student-detail [student]='student'></app-student-detail>\n  </mat-card>\n</div>\n"
 
 /***/ }),
 
@@ -1043,15 +1231,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StudentsListComponent", function() { return StudentsListComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _shared_student_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/student.service */ "./src/app/shared/student.service.ts");
+/* harmony import */ var _shared_services_student_student_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/services/student/student.service */ "./src/app/shared/services/student/student.service.ts");
 
 
 
+/**
+ * Used to show onboarded students list using student-detail child component
+ * @export
+ * @class StudentsListComponent
+ * @implements {OnInit}
+ */
 var StudentsListComponent = /** @class */ (function () {
+    /**
+     * Creates an instance of StudentsListComponent.
+     * @param {StudentService} studentService
+     *
+     * @memberOf StudentsListComponent
+     */
     function StudentsListComponent(studentService) {
         this.studentService = studentService;
         this.students = [];
     }
+    /**
+     * Intialize student list data by fetching student list through service
+     * @memberOf StudentsListComponent
+     */
     StudentsListComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.studentService.sendStudentData();
@@ -1059,6 +1263,11 @@ var StudentsListComponent = /** @class */ (function () {
             _this.students = value;
         });
     };
+    /**
+     * @param {string} categoryName
+     * select student list based on category
+     * @memberOf StudentsListComponent
+     */
     StudentsListComponent.prototype.selectStudentBasedOnCategory = function (categoryName) {
         var _this = this;
         if (this.students != null) {
@@ -1075,7 +1284,7 @@ var StudentsListComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./student-list.component.html */ "./src/app/on-board/student-list/student-list.component.html"),
             styles: [__webpack_require__(/*! ./student-list.component.css */ "./src/app/on-board/student-list/student-list.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_student_service__WEBPACK_IMPORTED_MODULE_2__["StudentService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_services_student_student_service__WEBPACK_IMPORTED_MODULE_2__["StudentService"]])
     ], StudentsListComponent);
     return StudentsListComponent;
 }());
@@ -1084,10 +1293,10 @@ var StudentsListComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/shared/auth.guard.ts":
-/*!**************************************!*\
-  !*** ./src/app/shared/auth.guard.ts ***!
-  \**************************************/
+/***/ "./src/app/shared/auth-guard/auth.guard.ts":
+/*!*************************************************!*\
+  !*** ./src/app/shared/auth-guard/auth.guard.ts ***!
+  \*************************************************/
 /*! exports provided: AuthGuard */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1096,7 +1305,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthGuard", function() { return AuthGuard; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./auth.service */ "./src/app/shared/auth.service.ts");
+/* harmony import */ var _services_auth_auth_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/auth/auth.service */ "./src/app/shared/services/auth/auth.service.ts");
 
 
 
@@ -1111,7 +1320,7 @@ var AuthGuard = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: 'root'
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_auth_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"]])
     ], AuthGuard);
     return AuthGuard;
 }());
@@ -1120,91 +1329,10 @@ var AuthGuard = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/shared/auth.service.ts":
-/*!****************************************!*\
-  !*** ./src/app/shared/auth.service.ts ***!
-  \****************************************/
-/*! exports provided: AuthService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthService", function() { return AuthService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
-
-
-
-
-
-var AuthService = /** @class */ (function () {
-    function AuthService(httpClient) {
-        this.httpClient = httpClient;
-        this.baseUrl = 'http://localhost:4200/api/users';
-    }
-    AuthService.prototype.checkCredentials = function (userInfo) {
-        return this.httpClient.get(this.baseUrl).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (user) { return user.filter(function (x) { return x.email == userInfo.email && x.password == userInfo.password; }); }));
-    };
-    AuthService.prototype.login = function () {
-        console.log("login sucess");
-        localStorage.setItem('token', "myToken");
-    };
-    AuthService.prototype.isLoggedIn = function () {
-        return localStorage.getItem('token') !== null;
-    };
-    AuthService.prototype.registerUser = function (user) {
-        try {
-            this.getNextIdForUser().subscribe(function (value) {
-                user.id = value;
-            });
-            return this.httpClient.post(this.baseUrl, user).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
-        }
-        catch (ex) {
-            console.log(ex.message);
-        }
-    };
-    AuthService.prototype.getNextIdForUser = function () {
-        return this.getUsers().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (user) { return user.reduce(function (prev, curr) {
-            return (prev.id > curr.id) ? prev : curr;
-        }).id + 1; }));
-    };
-    AuthService.prototype.getUsers = function () {
-        return this.httpClient.get(this.baseUrl).pipe();
-    };
-    AuthService.prototype.logout = function () {
-        localStorage.removeItem('token');
-    };
-    AuthService.prototype.handleError = function (err) {
-        var errorMessage = '';
-        if (err.error instanceof ErrorEvent) {
-            errorMessage = "An error occurred: " + err.error.message;
-        }
-        else {
-            errorMessage = "Server returned code: " + err.status + ", error message is: " + err.message;
-        }
-        console.error(errorMessage);
-        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["throwError"])(errorMessage);
-    };
-    AuthService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-            providedIn: 'root'
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
-    ], AuthService);
-    return AuthService;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/shared/data.ts":
-/*!********************************!*\
-  !*** ./src/app/shared/data.ts ***!
-  \********************************/
+/***/ "./src/app/shared/data/data.ts":
+/*!*************************************!*\
+  !*** ./src/app/shared/data/data.ts ***!
+  \*************************************/
 /*! exports provided: Data */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1217,11 +1345,13 @@ var Data = /** @class */ (function () {
     Data.prototype.createDb = function () {
         var users = [{
                 'id': 1,
+                'username': 'admin',
                 'email': 'admin@nagarro.com',
                 'password': 'Passw0rd'
             },
             {
                 'id': 2,
+                'username': 'nagarro',
                 'email': 'admin2@nagarro.com',
                 'password': 'Passw0rd2'
             }
@@ -1273,10 +1403,10 @@ var Data = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/shared/filter.pipe.ts":
-/*!***************************************!*\
-  !*** ./src/app/shared/filter.pipe.ts ***!
-  \***************************************/
+/***/ "./src/app/shared/pipe/filter.pipe.ts":
+/*!********************************************!*\
+  !*** ./src/app/shared/pipe/filter.pipe.ts ***!
+  \********************************************/
 /*! exports provided: FilterPipe */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1313,10 +1443,96 @@ var FilterPipe = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/shared/student.service.ts":
-/*!*******************************************!*\
-  !*** ./src/app/shared/student.service.ts ***!
-  \*******************************************/
+/***/ "./src/app/shared/services/auth/auth.service.ts":
+/*!******************************************************!*\
+  !*** ./src/app/shared/services/auth/auth.service.ts ***!
+  \******************************************************/
+/*! exports provided: AuthService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthService", function() { return AuthService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+
+
+
+
+
+var AuthService = /** @class */ (function () {
+    function AuthService(httpClient) {
+        this.httpClient = httpClient;
+        this.baseUrl = 'http://localhost:4200/api/users';
+        this.loggedInUser$ = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](null);
+    }
+    AuthService.prototype.checkCredentials = function (userInfo) {
+        return this.httpClient.get(this.baseUrl).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (user) { return user.filter(function (x) { return x.email == userInfo.email && x.password == userInfo.password; }); }));
+    };
+    AuthService.prototype.getLoggedInUser = function () {
+        return JSON.parse(localStorage.getItem('loggedInUser'));
+    };
+    AuthService.prototype.login = function (userInfo) {
+        localStorage.setItem('token', "myToken");
+        localStorage.setItem('loggedInUser', JSON.stringify(userInfo));
+    };
+    AuthService.prototype.isLoggedIn = function () {
+        return localStorage.getItem('token') !== null;
+    };
+    AuthService.prototype.registerUser = function (user) {
+        try {
+            this.getNextIdForUser().subscribe(function (value) {
+                user.id = value;
+            });
+            return this.httpClient.post(this.baseUrl, user).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
+        }
+        catch (ex) {
+            console.log(ex.message);
+        }
+    };
+    AuthService.prototype.getNextIdForUser = function () {
+        return this.getUsers().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (user) { return user.reduce(function (prev, curr) {
+            return (prev.id > curr.id) ? prev : curr;
+        }).id + 1; }));
+    };
+    AuthService.prototype.getUsers = function () {
+        return this.httpClient.get(this.baseUrl).pipe();
+    };
+    AuthService.prototype.logout = function () {
+        localStorage.removeItem('token');
+        localStorage.removeItem('loggedInUser');
+    };
+    AuthService.prototype.handleError = function (err) {
+        var errorMessage = '';
+        if (err.error instanceof ErrorEvent) {
+            errorMessage = "An error occurred: " + err.error.message;
+        }
+        else {
+            errorMessage = "Server returned code: " + err.status + ", error message is: " + err.message;
+        }
+        console.error(errorMessage);
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["throwError"])(errorMessage);
+    };
+    AuthService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], AuthService);
+    return AuthService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/services/student/student.service.ts":
+/*!************************************************************!*\
+  !*** ./src/app/shared/services/student/student.service.ts ***!
+  \************************************************************/
 /*! exports provided: StudentService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1341,7 +1557,7 @@ var StudentService = /** @class */ (function () {
         this.StudentDataForEdit$ = new rxjs__WEBPACK_IMPORTED_MODULE_3__["BehaviorSubject"](null);
     }
     StudentService.prototype.getStudentDataForEdit = function () {
-        return this.StudentDataForEdit$.asObservable();
+        return this.StudentDataForEdit$.asObservable().pipe();
     };
     StudentService.prototype.sendStudentDataForEdit = function (value) {
         this.StudentDataForEdit$.next(value);
@@ -1369,6 +1585,7 @@ var StudentService = /** @class */ (function () {
     };
     StudentService.prototype.addStudent = function (student) {
         try {
+            console.log("add");
             console.log(student);
             return this.httpClient.post(this.baseUrl, student).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["catchError"])(this.handleError));
         }
