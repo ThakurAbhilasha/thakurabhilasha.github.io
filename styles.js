@@ -598,8 +598,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! E:\NAGP\Assignments\latest\students-onboarding-app\src\styles.css */"./src/styles.css");
-module.exports = __webpack_require__(/*! E:\NAGP\Assignments\latest\students-onboarding-app\node_modules\ngx-toastr\toastr.css */"./node_modules/ngx-toastr/toastr.css");
+__webpack_require__(/*! E:\NAGP\Assignments\2.Angular\abhilashathakur_3145888_schoolOnBoardApp\src\styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! E:\NAGP\Assignments\2.Angular\abhilashathakur_3145888_schoolOnBoardApp\node_modules\ngx-toastr\toastr.css */"./node_modules/ngx-toastr/toastr.css");
 
 
 /***/ })
