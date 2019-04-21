@@ -839,6 +839,7 @@ var OnboardingFormComponent = /** @class */ (function () {
         this.studentService.updateStudent(this.student).subscribe(function (value) {
             _this.toastr.success('Updated successfully');
             _this.studentService.sendStudentData();
+            _this.studentService.sendStudentDataForEdit({});
             _this.student = null;
         });
     };
@@ -907,6 +908,7 @@ var OnboardingFormComponent = /** @class */ (function () {
     };
     OnboardingFormComponent.prototype.addNew = function () {
         this.onBoardForm.enable();
+        this.studentService.sendStudentDataForEdit({});
         this.reset();
         this.isDisabled = false;
         this.showAddButton = false;
